@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,34 +9,49 @@
 <body>
 
     <header>
-        <h1>BRAMAJO</h1>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo">
+            <h1>BRAMAJO</h1>
+        </div>
 
-        <nav>
+        <div class="buscador">
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <div class="perfil">
+            <img src="perfil.png" alt="Perfil">
+        </div>
+    </header>
+ <nav>
             <a href="index.html">Inicio</a>
             <a href="torneos.html">Torneos</a>
-            <a href="perfil.html">Perfil</a>
             <a href="crear-torneo.html">Crear torneo</a>
            
 </nav>
-       
-    </header>
-
     <main>
 
-        <section class="gestion">
+        <section class="hero">
             <h2>Gestioná torneos de forma simple</h2>
+
             <p>
                 Organizá competencias deportivas, mentales y electrónicas
                 desde una única plataforma.
             </p>
-            <nav>
-            <a href="torneos.html">Ver Torneos</a>
-             <a href="participantes.html">Participantes</a>
-             </nav>
         </section>
 
+        <nav class="menu">
+            <a href="torneos.html">Ver Torneos</a>
+            <a href="participantes.html">Ver Participantes</a>
+        </nav>
+
+    </main>
+
     <footer>
-        <p>BRAMAJO - Sistema de Gestión de Torneos</p>
+        <h3>Bramajo</h3>
+
+        <p>
+            Plataforma para la gestión de torneos y participantes.
+        </p>
     </footer>
 
 </body>
