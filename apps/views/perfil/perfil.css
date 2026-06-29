@@ -1,26 +1,195 @@
-.main {
-    padding: 20px;
-    font-size: 16px;
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+/* REGLA GENERAL */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.buttonRegistro {
-    background-color: #4CAF50;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    border: none;
+
+/* General */
+body {
+	font-size: 65.2%;
+	font-family: "Cinzel", serif;
+	width: 100%;
+	height: 100vh;
+	background-color: #0f1c33;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+}
+.header__logo {
+	width: 50px;
+}
+.header__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav__link {
+	padding: 0 0.5rem;
+	color: white;
+	font-size: 0.8rem;
+
+	&:hover {
+		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
+
+/* Container */
+.container {
+	display: grid;
+	place-items: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 90vh;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 600px;
+	background-color: lightgray;
+	position: relative;
+	border-radius: 1rem;
+}
+.card__banner {
+	border-radius: 1rem 1rem 0 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 150px;
+	filter: brightness(60%);
+	object-fit: cover;
+    border-bottom: 2px solid #0f1c33;
+}
+.card__profile {
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 100%;
+	border: 2px solid #303030;
+	top: 20px;
+	left: 20px;
+    box-shadow: 0px 5px 10px black;
+}
+.card__name {
+	position: absolute;
+	top: 80px;
+	left: 180px;
+	font-size: 2rem;
+	color: white;
+	font-weight: bold;
+}
+.card__job {
+	position: absolute;
+	top: 120px;
+	left: 185px;
+	font-size: 1rem;
+	color: white;
+	font-style: italic;
+}
+.card__info p {
+	padding: 0.5rem;
+}
+.card__info p:nth-child(1) {
+	font-size: 1.5rem;
+}
+.card__info p:nth-child(2) {
+	font-size: 1rem;
+}
+.card__desc {
+	text-align: center;
+    font-size: .8rem;
+    padding: 0 .5rem;
+}
+.card__desc h2 {
+    text-align: left;
+    padding: 0 .8rem;
+}
+.card__follow {
+	position: absolute;
+	bottom: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+}
+.follow__num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.num {
+	padding: 0 1rem;
+    font-size: 1rem;
+}
+.num p:nth-child(1) {
+	font-weight: bold;
+}
+.num p:nth-child(2) {
+	font-style: italic;
+}
+
+button {
+	border: none;
+	background-color: #0f1c33;
+	color: white;
+	padding: 0.7rem 2rem;
+	border-radius: 0.5rem;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+button:hover {
+    background-color: #0f1c339d;
+    font-weight: bold;
+    transform: scale(1.1);
 }
 
 /* Version MOBILE */
 @media screen and (max-width: 768px) {
-    /* pantalla de registro */
-    .main {
-        padding: 10px;
-        font-size: 14px;
+    .card {
+        width: 400px;
+        height: 500px;
     }
-    .buttonRegistro {
-        background-color: #4CAF50;
-        padding: 10px;
-        font-size: 14px;
+    .card__name {
+        font-size: 1.5rem;
+    }
+    .card__job {
+        font-size: 0.8rem;
+    }
+    .card__info p:nth-child(1) {
+	font-size: 1rem;
+    }
+    .card__info p:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    .card__desc {
+        font-size: .6rem;
+    }
+    .num {
+        font-size: .8rem;
+    }
+    button {
+        padding: 0.5rem 1rem;
     }
 }
