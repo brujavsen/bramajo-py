@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef2f7;
+    color:#333;
+    font-family: "Cinzel", serif;
 }
 
 img{
@@ -11,41 +17,29 @@ img{
     display: block;
 }
 
-body{
-    background:#eef2f7;
-    color:#333;
-}
-
 h1,p{
     color:#ffffff;
     font-size: 20px;
     margin:20px;
     text-align:center;
 }
-p1{
+
+.p1{
+    color:black;
     font-size: 15px;
     margin:20px;
     text-align:center;
 }
+
 nav{
     background:#0f1c33;
-    padding:15px;
     text-align:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-}
-
-nav a:hover{
-    color:yellow;
 }
 
 main{
     width:80%;
     margin:30px auto;
+    font-family:Arial,sans-serif;
 }
 
 section{
@@ -75,21 +69,16 @@ input{
 button{
     margin-top:20px;
     padding:10px;
-    background:#1f4e79;
+    background:#2563eb;
     color:white;
     border:none;
     cursor:pointer;
 }
 
 button:hover{
-    background:#163a5c;
+    background:#1d4ed8;
 }
 @media screen and (max-width: 768px) {
-
-    .main {
-        padding: 10px;
-        font-size: 14px;
-    }
 
 img{
     width: 100px;
@@ -116,16 +105,6 @@ img{
     gap: 20px;
 }
 
-nav a{
-    color: white;
-    text-decoration: none;
-    padding: 8px 12px;
-}
-
-nav a:hover{
-    color: yellow;
-}
-
     main{
         width: 95%;
         margin: 20px auto;
@@ -135,8 +114,7 @@ nav a:hover{
         padding: 15px;
     }
 
-    input,
-    button{
+    input,button{
         width: 100%;
         font-size: 16px;
     }

@@ -76,6 +76,53 @@ main{
     padding:25px;
 }
 
+
+.gestion{
+    width: 90%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gestion_titulo {
+    color: rgb(255, 255, 255);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 2rem;
+}
+
+.gestion_desc {
+font-size: 1.5rem;
+color: rgb(231, 231, 231);
+font-family: Arial, Helvetica, sans-serif;
+} 
+
+.gestion__nav{
+display: flex;
+gap: 3rem;
+width: 100%;
+justify-content: center;
+}
+
+.link_gestion{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+   
+}
+.link_gestion:hover{
+ padding: 12px 40px;
+}
+
+
 .hero h2{
     font-size:2rem;
     margin-bottom:15px;
