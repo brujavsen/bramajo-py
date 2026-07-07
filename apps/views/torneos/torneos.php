@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="torneos.css">
+    <link rel="stylesheet" href="views/torneos/torneos.css">
     <link rel="stylesheet" href="../../../apps/templates/base.css" />
-<body>
-    <header class="header">
-        <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo">
-        <nav class="header__nav">
-            <a class="nav__link" href="../index/index.html">Inicio</a>
-            <a class="nav__link" href="../registro-participante/registro.html">Registrarse</a>
-            <a class="nav__link" href="../torneos/torneos.html">Torneos</a>
-            <a class="nav__link" href="../torneos/crearTorneo.html">Crear torneo</a>
-            <a class="nav__link" href="../perfil/perfil.html">Perfil</a>
+
+</head>
+ <header class="header">
+    <nav>
+        <?php include __DIR__ . '/../base/Header.php'; ?>
         </nav>
     </header>
     <nav>
