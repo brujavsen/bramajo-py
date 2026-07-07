@@ -20,7 +20,7 @@
         <h1>CREA TU TORNEO</h1>
         <p>Crea y administra tus competiciones con BRAMAJO</p>
 
-        <section id="presentacion">
+        <section>
             <h2>Crea tu torneo fácilmente</h2>
             <p1>Organiza competencias deportivas, eSports o cualquier evento.
                 Completa el formulario y comienza a gestionar participantes.

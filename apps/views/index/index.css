@@ -98,10 +98,10 @@ justify-content: center;
     cursor:pointer;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
     transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
-   
+
 }
 .link_gestion:hover{
- padding: 12px 40px;
+padding: 12px 40px;
 }
 
 

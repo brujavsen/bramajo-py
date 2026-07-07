@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="../../../apps/templates/base.css" />
 
 </head>
- <header class="header">
-    <nav>
         <?php include __DIR__ . '/../base/Header.php'; ?>
-        </nav>
-    </header>
+
     <nav>
         <h1>TORNEOS</h1>
         <p class="p1">Descubre y participa en los torneos que tenemos en BRAMAJO.</p>
