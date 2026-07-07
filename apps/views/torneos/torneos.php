@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="torneos.css">
+    <link rel="stylesheet" href="views/torneos/torneos.css">
+    <link rel="stylesheet" href="../../../apps/templates/base.css" />
+
+</head>
+
+<body>
+
+    <?php include __DIR__ . '/../base/Header.php'; ?>
+
+
+    <div class="torneo">
+        <h3>Liga Escolar 2026</h3>
+        <a href="detalle.html">Ver torneo</a>
+    </div>
+</body>
+
+</html>

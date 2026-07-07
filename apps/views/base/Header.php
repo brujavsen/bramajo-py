@@ -1,0 +1,10 @@
+<header class="header">
+    <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo">
+    <nav class="header__nav">
+        <a class="nav__link" href="../index/index.html">Inicio</a>
+        <a class="nav__link" href="../registro-participante/registro.html">Registrarse</a>
+        <a class="nav__link" href="../torneos/torneos.html">Torneos</a>
+        <a class="nav__link" href="../torneos/crearTorneo.html">Crear torneo</a>
+        <a class="nav__link" href="../perfil/perfil.html">Perfil</a>
+    </nav>
+</header>
