@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+=======
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+img{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+>>>>>>> df8efe9d815bd348e75c385daefedd6c682e02dc
 
 body{
     color:#333;
