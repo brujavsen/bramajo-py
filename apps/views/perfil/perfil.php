@@ -30,7 +30,7 @@
             <section class="card__follow">
                 <div class="follow__num">
                     <div class="num">
-                        <p>8,000</p>
+                        <p>67</p>
                         <p>Seguidores</p>
                     </div>
     
