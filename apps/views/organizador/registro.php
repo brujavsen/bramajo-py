@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-     <link rel="stylesheet" href="../../../apps/templates/base.css" />
-     <link rel="stylesheet" href="registro.css" />
+    <link rel="stylesheet" href="../base/base.css" />
+    <link rel="stylesheet" href="registro.css" />
 </head>
 
 <body>
