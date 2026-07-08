@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../../apps/templates/base.css" />
 
 </head>
+
         <?php include __DIR__ . '/../base/Header.php'; ?>
 
     <nav>
@@ -18,6 +19,8 @@
     </nav>
     <main>
 
+<body>
+    
         <section>
             <h2>Torneos Pendientes</h2>
 

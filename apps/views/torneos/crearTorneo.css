@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 h1,p{
+    font-family: "Cinzel", serif;
     color:#ffffff;
     font-size: 20px;
     margin:20px;
@@ -50,7 +51,7 @@ input{
 }
 
 button{
-    margin-top:20px;
+     margin-top:20px;
     padding:10px;
     width:150px;
     background:#2563eb;

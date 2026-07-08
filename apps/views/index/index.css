@@ -1,12 +1,6 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-@media screen and (max-width: 768px) {
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
 
 body{
     min-height:100vh;
@@ -15,35 +9,36 @@ body{
     background:#f5f5f5;
 }
 
-
-
-
 /* PERFIL */
 
 .perfil{
     position:absolute;
-    top:15px;
-    right:15px;
+    top:30px;
+    right:30px;
 }
 
 .perfil img{
-    width:40px;
-    height:40px;
+    width:70px;
+    height:70px;
     border-radius:50%;
 }
 
 /* BUSCADOR */
 
 .buscador{
-    margin-top:15px;
+    margin-top:30px;
+    width:70%;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .buscador input{
     width:100%;
-    padding:12px;
+    padding:20px;
     border:none;
-    border-radius:25px;
-    font-size:1rem;
+    border-radius:40px;
+    font-size:1.4rem;
 }
 
 /* MAIN */
@@ -55,45 +50,44 @@ main{
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:25px;
+    padding:60px;
 }
-
 
 .gestion{
-    width: 90%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    width:80%;
+    max-width:1300px;
+    height:700px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    border-radius:20px;
 }
 
-.gestion_titulo {
-    color: rgb(255, 255, 255);
-font-family: Arial, Helvetica, sans-serif;
-font-size: 2rem;
+.gestion_titulo{
+    color:white;
+    font-size:3.5rem;
 }
 
-.gestion_desc {
-font-size: 1.5rem;
-color: rgb(231, 231, 231);
-font-family: Arial, Helvetica, sans-serif;
-} 
+.gestion_desc{
+    font-size:2rem;
+    color:rgb(231,231,231);
+}
 
 .gestion__nav{
-display: flex;
-gap: 3rem;
-width: 100%;
-justify-content: center;
+    display:flex;
+    gap:5rem;
+    width:100%;
+    justify-content:center;
 }
 
 .link_gestion{
     background:#2563eb;
     color:white;
     border:none;
-    padding:12px 28px;
-    border-radius:12px;
-    font-size:17px;
+    padding:20px 45px;
+    border-radius:15px;
+    font-size:1.5rem;
     font-weight:bold;
     cursor:pointer;
     box-shadow:0 5px 15px rgba(0,0,0,.2);
@@ -102,38 +96,43 @@ justify-content: center;
 }
 .link_gestion:hover{
 padding: 12px 40px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:all .3s cubic-bezier(0.19,1,0.22,1);
 }
 
+.link_gestion:hover{
+    padding:20px 60px;
+}
 
 .hero h2{
-    font-size:2rem;
-    margin-bottom:15px;
+    font-size:3rem;
+    margin-bottom:25px;
     color:#222;
 }
 
 .hero p{
-    font-size:1rem;
+    font-size:1.5rem;
     color:#555;
-    margin-bottom:30px;
-    line-height:1.5;
+    margin-bottom:40px;
+    line-height:1.7;
 }
 
 /* MENU */
 
 .menu{
-    width:100%;
+    width:70%;
     display:flex;
     flex-direction:column;
-    gap:15px;
+    gap:25px;
 }
 
 .menu a{
     text-decoration:none;
     background:#2563eb;
     color:white;
-    padding:15px;
-    border-radius:10px;
-    font-size:1rem;
+    padding:25px;
+    border-radius:15px;
+    font-size:1.4rem;
     font-weight:bold;
 }
 
@@ -142,9 +141,89 @@ padding: 12px 40px;
 footer{
     background:#1f2937;
     color:white;
-    padding:15px;
+    padding:25px;
     text-align:center;
+    font-size:1.2rem;
 }
+@media screen and (max-width: 768px) {
 
+    .perfil{
+        top:15px;
+        right:15px;
+    }
+
+    .perfil img{
+        width:40px;
+        height:40px;
+    }
+
+    .buscador{
+        margin-top:15px;
+        width:100%;
+    }
+
+    .buscador input{
+        padding:12px;
+        border-radius:25px;
+        font-size:1rem;
+    }
+
+    main{
+        padding:25px;
+    }
+
+    .gestion{
+        width:90%;
+        height:500px;
+    }
+
+    .gestion_titulo{
+        font-size:2rem;
+    }
+
+    .gestion_desc{
+        font-size:1.5rem;
+    }
+
+    .gestion__nav{
+        gap:3rem;
+    }
+
+    .link_gestion{
+        padding:12px 28px;
+        border-radius:12px;
+        font-size:17px;
+        box-shadow:0 5px 15px rgba(0,0,0,.2);
+    }
+
+    .link_gestion:hover{
+        padding:12px 40px;
+    }
+
+    .hero h2{
+        font-size:2rem;
+        margin-bottom:15px;
+    }
+
+    .hero p{
+        font-size:1rem;
+        margin-bottom:30px;
+        line-height:1.5;
+    }
+
+    .menu{
+        width:100%;
+        gap:15px;
+    }
+
+    .menu a{
+        padding:15px;
+        border-radius:10px;
+        font-size:1rem;
+    }
+
+    footer{
+        padding:15px;
+    }
 
 }
