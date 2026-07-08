@@ -37,7 +37,7 @@
 
 
             <button>Iniciar Sesión</button>
-            <h3>¿No tienes una cuenta? <a id="registrarse" href="registro.html">Regístrate aquí</a></h3>
+            <h3>¿No tienes una cuenta? <a id="registrarse" href="registro.php">Regístrate aquí</a></h3>
 
         </form>
 

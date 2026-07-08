@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-img{
-    width: 100px;
-    height: auto;
-    display: block;
-}
-
 h1, .p1{
     color:#ffffff;
     font-size: 20px;
@@ -13,12 +7,6 @@ h1, .p1{
     text-align:center;
     font-family:Arial,sans-serif;
 }
-
-nav{
-    background:#0f1c33;
-    text-align:center;
-}
-
 
 main{
     display:flex;

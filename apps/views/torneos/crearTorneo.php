@@ -44,10 +44,10 @@
                 <input type="number" min="2">
 
 
-                <button>Crear Torneo</button>
+               
             </form>
         </section>
-
+ <button>Crear Torneo</button>
     </main>
 </body>
 
