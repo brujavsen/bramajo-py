@@ -11,18 +11,18 @@
 
 <body>
     <?php include __DIR__ . '/../base/Header.php'; ?>
-</body>
+
 
 <main>
     <h1>INICIAR SESIÓN</h1>
 
-    <section id="presentacion">
+    <section class="presentacion">
         <h2>Ingresa a tu cuenta para acceder a todos los torneos, competencias y eventos</h2>
         <p1>Por favor, ingresa tu correo y contraseña.
         </p1>
     </section>
 
-    <section id="formulario">
+    <section class="formulario">
         <h2>Iniciar Sesión</h2>
 
         <form>
@@ -30,17 +30,17 @@
             <input type="email" placeholder="Ej: juan@ejemplo.com">
 
             <label>Contraseña:</label>
-            <input type="password" placeholder=" ">
-
-
-
-            <button>Iniciar Sesión</button>
+            <input type="password" placeholder="**********">
+            
             <h3>¿No tienes una cuenta? <a id="registrarse" href="registro.php">Regístrate aquí</a></h3>
 
         </form>
 
     </section>
-
+ <button>Iniciar Sesión</button>
 </main>
-
+<footer>
+			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
+		</footer>
+</body>
 </html>

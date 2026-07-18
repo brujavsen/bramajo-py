@@ -5,7 +5,7 @@ h1, .p1{
     font-size: 20px;
     margin:20px;
     text-align:center;
-    font-family:Arial,sans-serif;
+    font-family: "Cinzel", serif;
 }
 
 main{
@@ -21,10 +21,16 @@ main{
 
 section{
     background:white;
+<<<<<<< HEAD:apps/views/torneos/torneos.css
+=======
     width:100%;
     border-radius:10px;
+>>>>>>> 32467b675f8531867039adff60cfdfefe8eb874f:apps/views/publico/torneos.css
     padding:20px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 2px 5px gray;
 }
 
 section h2{
@@ -43,7 +49,7 @@ article{
     padding:15px;
     margin-bottom:20px;
 }
-    
+ 
 article h3{
     margin-bottom:10px;
 }
@@ -53,20 +59,31 @@ article p{
 }
 
 button{
-    width:100%;
-    padding:10px;
-    margin-top:10px;
     background:#2563eb;
     color:white;
     border:none;
-    border-radius:5px;
+    padding:7px 15px;
+    border-radius:15px;
+    font-size:14px;
+    font-weight:bold;
     cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:all .3s cubic-bezier(0.19,1,0.22,1);
+    width:auto;
+
 }
 
 button:hover{
+     padding:10px 30px;
     background:#1d4ed8;
+    }
+    
+footer{
+    color:white;
+    padding:25px;
+    text-align:center;
+    font-size:1.2rem;
 }
-
 @media(max-width:768px){
 
     main{

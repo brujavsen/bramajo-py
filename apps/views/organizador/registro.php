@@ -34,11 +34,11 @@
                 <input type="password" placeholder=" ">
 
 
-                <button>Crear Cuenta</button>
+                
                 <h3>¿Ya tienes una cuenta? <a id="iniciarSesion" href="login.php">Inicia sesión</a></h3>
             </form>
         </section>
-
+<button>Crear Cuenta</button>
     </main>
 </body>
 

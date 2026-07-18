@@ -15,7 +15,7 @@ h1,p{
 }
 
 nav{
-    background:#0f1c33;
+    
     text-align:center;
 }
 
@@ -23,14 +23,20 @@ main{
     width:80%;
     margin:30px auto;
     font-family:Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section{
     background:white;
     padding:20px;
+    width: 100%;
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
+
 }
 
 form{
@@ -67,6 +73,12 @@ button{
 button:hover{
     padding:10px 30px;
     background:#1d4ed8;
+}
+footer{
+    color:white;
+    padding:25px;
+    text-align:center;
+    font-size:1.2rem;
 }
 @media screen and (max-width: 768px) {
 

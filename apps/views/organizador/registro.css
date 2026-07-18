@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+<<<<<<< HEAD:apps/views/registro-participante/registro.css
+=======
 
 *{
     margin:0;
@@ -12,12 +14,14 @@ img{
     height: auto;
     display: block;
 }
+>>>>>>> 32467b675f8531867039adff60cfdfefe8eb874f:apps/views/organizador/registro.css
 
 body{
     color:#333;
 }
 
 h1,p{
+    font-family: "Cinzel", serif;
     color:#ffffff;
     font-size: 20px;
     margin:20px;
@@ -33,11 +37,16 @@ main{
     width:80%;
     margin:30px auto;
     font-family:Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 section{
-    background:white;
+     background:white;
     padding:20px;
+    width: 100%;
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
@@ -65,16 +74,23 @@ text-decoration: underline;
 }
 
 button{
-    margin-top:20px;
-    padding:10px;
-    background:#2563eb;
+   background:#2563eb;
     color:white;
     border:none;
+    padding:10px 25px;
+    border-radius:15px;
+    font-size:1rem;
+    font-weight:bold;
     cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:all .3s cubic-bezier(0.19,1,0.22,1);
+    width: fit-content;
+    margin: 10px auto;
 }
 
 button:hover{
-     background:#1d4ed8;
+   padding:10px 30px;
+    background:#1d4ed8;
 }
 @media screen and (max-width: 768px) {
 
@@ -109,6 +125,8 @@ button:hover{
     }
 
     button{
+      width: fit-content;
+    margin: 10px auto;
         padding: 12px;
     }
 
