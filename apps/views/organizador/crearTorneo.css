@@ -1,4 +1,4 @@
-/* FUENTES */
+
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 /* REGLA GENERAL */
@@ -16,7 +16,7 @@ body {
 	font-family: "Cinzel", serif;
 	width: 100%;
 	height: 100vh;
-	 background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
+	background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
 }
 a {
 	text-decoration: none;
@@ -53,6 +53,7 @@ img {
 		text-decoration: underline;
 	}
 }
+
 h1,p{
     font-family: "Cinzel", serif;
     color:#ffffff;
@@ -83,14 +84,25 @@ main{
     flex-direction: column;
 }
 
-section{
-    background:white;
-    padding:20px;
+.titulo{
+    background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
+    padding:30px 20px;
     width: 100%;
-    margin-bottom:20px;
+    margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-
+    width: 100%;
+    max-width: 1200px;
+}
+.formulario{
+    background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
+    padding:30px 20px;
+    width: 100%;
+    margin-bottom:10px;
+    border-radius:8px;
+    box-shadow:0 2px 5px gray;
+    width: 100%;
+    max-width: 1200px;
 }
 
 form{
@@ -125,7 +137,7 @@ button{
 }
 
 button:hover{
-     padding:10px 30px;
+    padding:10px 30px;
     background:#1d4ed8;
 }
 footer{
@@ -136,41 +148,65 @@ footer{
 }
 @media screen and (max-width: 768px) {
 
-    h1{
-        font-size: 28px;
-        margin: 15px;
-    }
-
-    p{
-        font-size: 16px;
-        margin: 10px;
-    }
-
-    nav{
-    background: #0f1c33;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-end; /* Las mueve hacia la derecha */
-    gap: 20px;
+body{
+    height:auto;
 }
 
-    main{
-        width: 95%;
-        margin: 20px auto;
-    }
+.header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
 
-    section{
-        padding: 15px;
-    }
+.header__logo{
+    width:70px;
+}
 
-    input,button{
-        width: 100%;
-        font-size: 16px;
-    }
+.header__nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
 
-    button{
-         width: fit-content;
-    margin: 10px auto;
-        padding: 12px;
-    }
+.nav__link{
+    font-size:1rem;
+}
+
+main{
+    width:95%;
+    margin:20px auto;
+}
+
+.titulo,
+.formulario{
+    padding:20px 15px;
+}
+
+h1{
+    font-size:1.8rem;
+}
+
+p{
+    font-size:1rem;
+    margin:10px;
+}
+
+.p1{
+    font-size:0.9rem;
+    margin:10px;
+}
+
+label{
+    font-size:1rem;
+}
+
+input{
+    font-size:1rem;
+}
+
+footer{
+    font-size:1rem;
+    padding:20px 10px;
+}
+
 }
