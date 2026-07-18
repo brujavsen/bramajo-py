@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
 *{
     margin:0;
     padding:0;
@@ -72,7 +74,7 @@ input{
     font-size: 13px;
 }
 
-#iniciarSesion{
+#registrarse{
     color: blue;
 text-decoration: underline;
 }

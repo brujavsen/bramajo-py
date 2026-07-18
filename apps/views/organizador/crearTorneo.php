@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crear Torneo</title>
 
     <link rel="stylesheet" href="crearTorneo.css">
-    <link rel="stylesheet" href="views/creartorneo/crearTorneo.css">
-    <link rel="stylesheet" href="crearTorneo.css">
-    <link rel="stylesheet" href="../../../apps/templates/base.css" />
+    <link rel="stylesheet" href="../base/base.css" />
 
 </head>
 
@@ -43,11 +41,9 @@
                 <label>Cantidad de Equipos:</label>
                 <input type="number" min="2">
 
-
-                <button>Crear Torneo</button>
             </form>
         </section>
-
+                <button>Crear Torneo</button>
     </main>
 </body>
 

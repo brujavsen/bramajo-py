@@ -1,22 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+img{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+body{
+    color:#333;
+}
+
 h1,p{
-    font-family: "Cinzel", serif;
     color:#ffffff;
     font-size: 20px;
     margin:20px;
     text-align:center;
 }
-
-.p1{
-    color:black;
+p1{
     font-size: 15px;
     margin:20px;
-    text-align:center;
-}
-
-nav{
-    background:#0f1c33;
     text-align:center;
 }
 
@@ -50,21 +59,29 @@ input{
     font-size: 13px;
 }
 
+#iniciarSesion{
+    color: blue;
+text-decoration: underline;
+}
+
 button{
-     margin-top:20px;
+    margin-top:20px;
     padding:10px;
-    width:150px;
     background:#2563eb;
     color:white;
     border:none;
     cursor:pointer;
-
 }
 
 button:hover{
-    background:#1d4ed8;
+     background:#1d4ed8;
 }
 @media screen and (max-width: 768px) {
+
+    .main {
+        padding: 10px;
+        font-size: 14px;
+    }
 
     h1{
         font-size: 28px;
@@ -76,14 +93,6 @@ button:hover{
         margin: 10px;
     }
 
-    nav{
-    background: #0f1c33;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-end; /* Las mueve hacia la derecha */
-    gap: 20px;
-}
-
     main{
         width: 95%;
         margin: 20px auto;
@@ -93,7 +102,8 @@ button:hover{
         padding: 15px;
     }
 
-    input,button{
+    input,
+    button{
         width: 100%;
         font-size: 16px;
     }
@@ -101,4 +111,6 @@ button:hover{
     button{
         padding: 12px;
     }
+
+
 }

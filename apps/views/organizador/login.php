@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="views/login/login.css">
-    <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="../../../apps/templates/base.css" />
+    <link rel="stylesheet" href="../base/base.css" />
 </head>
 
 <body>
@@ -37,7 +35,7 @@
 
 
             <button>Iniciar Sesión</button>
-            <h3>¿No tienes una cuenta? <a id="registrarse" href="registro.html">Regístrate aquí</a></h3>
+            <h3>¿No tienes una cuenta? <a id="registrarse" href="registro.php">Regístrate aquí</a></h3>
 
         </form>
 

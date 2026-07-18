@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
+    <link rel="stylesheet" href="../base/base.css" />
+    <link rel="stylesheet" href="registro.css" />
 </head>
 
 <body>
@@ -33,7 +35,7 @@
 
 
                 <button>Crear Cuenta</button>
-                <h3>¿Ya tienes una cuenta? <a id="iniciarSesion" href="login.html">Inicia sesión</a></h3>
+                <h3>¿Ya tienes una cuenta? <a id="iniciarSesion" href="login.php">Inicia sesión</a></h3>
             </form>
         </section>
 
