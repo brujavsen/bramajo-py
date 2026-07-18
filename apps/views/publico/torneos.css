@@ -72,14 +72,14 @@ main{
 }
 
 section{
-    background:white;
-    width:100%;
-    border-radius:10px;
-    padding:20px;
+    background: linear-gradient(rgb(241, 238, 238), rgb(201, 194, 194));
+    padding:30px 20px;
     width: 100%;
-    margin-bottom:20px;
+    margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
+    width: 100%;
+    max-width: 1200px;
 }
 
 section h2{
@@ -90,6 +90,7 @@ section h2{
 
 .torneos {
     display: flex;
+    Background: white;
 }
 
 article{
@@ -135,14 +136,89 @@ footer{
 }
 @media(max-width:768px){
 
-    main{
-        flex-direction:column;
-        padding:15px;
-    }
+body{
+    font-size:60%;
+    height:auto;
+}
 
-    section{
-        width:100%;
-    }
+.header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
 
+.header__logo{
+    width:70px;
+}
+
+.header__nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.nav__link{
+    font-size:1rem;
+    padding:5px;
+}
+
+h1{
+    font-size:1.8rem;
+    margin:15px 10px;
+}
+
+.p1{
+    font-size:1rem;
+    margin:10px;
+}
+
+main{
+    padding:15px;
+    gap:15px;
+}
+
+section{
+    width:100%;
+    padding:20px 15px;
+}
+
+section h2{
+    font-size:1.5rem;
+}
+
+.torneos{
+    flex-direction:column;
+    gap:15px;
+}
+
+article{
+    width:100%;
+    padding:15px;
+}
+
+article h3{
+    font-size:1.2rem;
+}
+
+article p{
+    font-size:1rem;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    font-size:1rem;
+}
+
+button:hover{
+    padding:12px;
+}
+
+footer{
+    font-size:1rem;
+    padding:20px 10px;
+}
 
 }

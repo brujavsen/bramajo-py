@@ -56,8 +56,6 @@ img {
 	}
 }
 
->>>>>>> 69cac1f981281e828fb7884764425fbd07c53577
-
 h1,p{
     font-family: "Cinzel", serif;
     color:#ffffff;
@@ -159,6 +157,25 @@ footer{
 }
 
 @media screen and (max-width: 768px) {
+.header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
+
+.header__logo{
+    width:70px;
+}
+
+.header__nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.nav__link{
+    font-size:1rem;
+}
 
     h1{
         font-size: 28px;

@@ -167,6 +167,26 @@ button:hover {
 
 /* Version MOBILE */
 @media screen and (max-width: 768px) {
+.header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
+
+.header__logo{
+    width:70px;
+}
+
+.header__nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.nav__link{
+    font-size:1rem;
+}
+
     .card {
         width: 400px;
         height: 500px;
