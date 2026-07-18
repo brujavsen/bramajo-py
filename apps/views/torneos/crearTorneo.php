@@ -49,6 +49,9 @@
         </section>
  <button>Crear Torneo</button>
     </main>
+    <footer>
+			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
+		</footer>
 </body>
 
 </html>

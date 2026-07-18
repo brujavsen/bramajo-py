@@ -12,10 +12,10 @@
 
 		<main>
 			<section class="gestion">
-				<h2 class="gestion_titulo">Gestioná torneos de forma simple</h2>
+				<h2 class="gestion_titulo">Gestiona torneos de forma simple</h2>
 				<p class="gestion_desc">
 
-					Organizá competencias deportivas, mentales y electrónicas desde una única
+					Organiza competencias deportivas, mentales y electrónicas desde una única
 					plataforma.
 				</p>
 				<nav class="gestion__nav">

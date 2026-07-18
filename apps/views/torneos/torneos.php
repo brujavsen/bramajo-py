@@ -28,9 +28,11 @@
             <h2>Torneos Pendientes</h2>
 
             <article>
-                <h3>Copa Alejito</h3>
-                <p>Deporte: Voley</p>
-                <p>Fecha de inicio: 29/08/2026</p>
+                <div>
+                    <h3>Copa Alejito</h3>
+                    <p>Deporte: Voley</p>
+                    <p>Fecha de inicio: 29/08/2026</p>
+                </div>
                 <button>Ver detalles</button>
             </article>
 
@@ -79,6 +81,8 @@
         </section>
 
     </main>
-
+<footer>
+			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
+		</footer>
 </body>
 </html>
