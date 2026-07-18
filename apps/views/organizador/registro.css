@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+<<<<<<< HEAD:apps/views/registro-participante/registro.css
+=======
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+img{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+>>>>>>> 32467b675f8531867039adff60cfdfefe8eb874f:apps/views/organizador/registro.css
+
+body{
+    color:#333;
+}
 
 h1,p{
     font-family: "Cinzel", serif;
@@ -7,16 +27,9 @@ h1,p{
     margin:20px;
     text-align:center;
 }
-
-.p1{
-    color:black;
+p1{
     font-size: 15px;
     margin:20px;
-    text-align:center;
-}
-
-nav{
-    
     text-align:center;
 }
 
@@ -31,13 +44,12 @@ main{
 }
 
 section{
-    background:white;
+     background:white;
     padding:20px;
     width: 100%;
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-
 }
 
 form{
@@ -56,8 +68,13 @@ input{
     font-size: 13px;
 }
 
+#iniciarSesion{
+    color: blue;
+text-decoration: underline;
+}
+
 button{
-    background:#2563eb;
+   background:#2563eb;
     color:white;
     border:none;
     padding:10px 25px;
@@ -72,16 +89,15 @@ button{
 }
 
 button:hover{
-     padding:10px 30px;
+   padding:10px 30px;
     background:#1d4ed8;
 }
-footer{
-    color:white;
-    padding:25px;
-    text-align:center;
-    font-size:1.2rem;
-}
 @media screen and (max-width: 768px) {
+
+    .main {
+        padding: 10px;
+        font-size: 14px;
+    }
 
     h1{
         font-size: 28px;
@@ -93,14 +109,6 @@ footer{
         margin: 10px;
     }
 
-    nav{
-    background: #0f1c33;
-    padding: 15px;
-    display: flex;
-    justify-content: flex-end; /* Las mueve hacia la derecha */
-    gap: 20px;
-}
-
     main{
         width: 95%;
         margin: 20px auto;
@@ -110,14 +118,17 @@ footer{
         padding: 15px;
     }
 
-    input,button{
+    input,
+    button{
         width: 100%;
         font-size: 16px;
     }
 
     button{
-         width: fit-content;
+      width: fit-content;
     margin: 10px auto;
         padding: 12px;
     }
+
+
 }

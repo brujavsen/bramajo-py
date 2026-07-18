@@ -11,6 +11,9 @@ h1, .p1{
 main{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    flex-direction:column;
+    justify-content:space-between;
     gap:20px;
     padding:30px;
     font-family:Arial,sans-serif;
@@ -18,6 +21,11 @@ main{
 
 section{
     background:white;
+<<<<<<< HEAD:apps/views/torneos/torneos.css
+=======
+    width:100%;
+    border-radius:10px;
+>>>>>>> 32467b675f8531867039adff60cfdfefe8eb874f:apps/views/publico/torneos.css
     padding:20px;
     width: 100%;
     margin-bottom:20px;
@@ -29,6 +37,10 @@ section h2{
     text-align:center;
     margin-bottom:20px;
     color:#1e3a8a;
+}
+
+.torneos {
+    display: flex;
 }
 
 article{
