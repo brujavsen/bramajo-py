@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
 /* REGLA GENERAL */
 *,
 *::after,
@@ -141,6 +140,12 @@ main{
     font-size:1.5rem;
     font-weight:bold;
     cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+.link_gestion:hover{
+padding: 12px 40px;
     box-shadow:0 8px 20px rgba(0,0,0,.2);
     transition:all .3s cubic-bezier(0.19,1,0.22,1);
 }
@@ -190,6 +195,25 @@ footer{
     font-size:1.2rem;
 }
 @media screen and (max-width: 768px) {
+    .header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
+
+.header__logo{
+    width:70px;
+}
+
+.header__nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.nav__link{
+    font-size:1rem;
+}
 
     .perfil{
         top:15px;

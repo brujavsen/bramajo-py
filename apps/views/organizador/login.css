@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
 /* REGLA GENERAL */
 *,
 *::after,
@@ -15,8 +14,8 @@ body {
 	font-family: "Cinzel", serif;
 	width: 100%;
 	height: 100vh;
-	 background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
-     display: flex;
+	background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -65,9 +64,8 @@ svg {
 	}
 }
 
-
 h1,p{
-   font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif;
     color:#ffffff;
     font-size: 20px;
     margin:20px;
@@ -96,17 +94,17 @@ main{
     margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-      width: 100%;
+    width: 100%;
     max-width: 1200px;
 }
- .presentacion{
-     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
+.presentacion{
+    background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
     padding:20px;
     width: 100%;
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-      width: 100%;
+    width: 100%;
     max-width: 1200px;
 }
 
@@ -140,7 +138,7 @@ text-decoration: underline;
 }
 
 button{
-   background:#2563eb;
+    background:#2563eb;
     color:white;
     border:none;
     padding:10px 25px;
@@ -167,6 +165,25 @@ footer{
 }
 
 @media screen and (max-width: 768px) {
+.header{
+    flex-direction:column;
+    height:auto;
+    padding:15px 10px;
+    gap:10px;
+}
+
+.header__logo{
+    width:70px;
+}
+
+.header__nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.nav__link{
+    font-size:1rem;
+}
 
     h1{
         font-size: 28px;
@@ -194,9 +211,9 @@ footer{
     }
 
     button{
-       width: fit-content;
+    width: fit-content;
     margin: 10px auto;
-        padding: 12px;
+    padding: 12px;
     }
 
 
