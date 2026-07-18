@@ -1,5 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
+/* REGLA GENERAL */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* General */
+body {
+	font-size: 65.2%;
+	font-family: "Cinzel", serif;
+	width: 100%;
+	height: 100vh;
+	background-color: #0f1c33;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+
+
+/* HEADER */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+}
+.header__logo {
+	width: 50px;
+}
+.header__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav__link {
+	padding: 0 0.5rem;
+	color: white;
+	font-size: 0.8rem;
+
+	&:hover {
+		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
 
 
 h1,p{
