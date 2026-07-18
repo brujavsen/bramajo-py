@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de sesión</title>
     <link rel="stylesheet" href="login.css">
-<<<<<<< HEAD:apps/views/registro-participante/login.php
-    <link rel="stylesheet" href="../../../apps/templates/base.css" />
-=======
     <link rel="stylesheet" href="../base/base.css" />
->>>>>>> 32467b675f8531867039adff60cfdfefe8eb874f:apps/views/organizador/login.php
 </head>
 
 <body>
