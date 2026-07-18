@@ -1,9 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+/* REGLA GENERAL */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* General */
+body {
+	font-size: 65.2%;
+	font-family: "Cinzel", serif;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
 
 
+/* HEADER */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+}
+.header__logo {
+	width: 50px;
+}
+.header__nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav__link {
+	padding: 0 0.5rem;
+	color: white;
+	font-size: 0.8rem;
+
+	&:hover {
+		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+		font-weight: bold;
+		text-decoration: underline;
+	}
+}
+
+>>>>>>> 69cac1f981281e828fb7884764425fbd07c53577
 
 h1,p{
-   font-family: "Cinzel", serif;
+    font-family: "Cinzel", serif;
     color:#ffffff;
     font-size: 20px;
     margin:20px;
@@ -32,14 +88,18 @@ main{
     margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
+    width: 100%;
+    max-width: 1200px;
 }
- .presentacion{
-     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
+.presentacion{
+    background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
     padding:20px;
     width: 100%;
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
+    width: 100%;
+    max-width: 1200px;
 }
 
 form{
@@ -72,7 +132,7 @@ text-decoration: underline;
 }
 
 button{
-   background:#2563eb;
+    background:#2563eb;
     color:white;
     border:none;
     padding:10px 25px;
@@ -126,9 +186,9 @@ footer{
     }
 
     button{
-       width: fit-content;
+    width: fit-content;
     margin: 10px auto;
-        padding: 12px;
+    padding: 12px;
     }
 
 
