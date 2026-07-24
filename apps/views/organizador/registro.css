@@ -50,7 +50,18 @@ svg {
     align-items: center;
     gap: 10px;
 }
+/* MENU HAMBURGUESA */
+.ham_cnt {
+    display: none;
+}
 
+#nav_check {
+    display: none;
+}
+
+#nav_ham {
+    display: none;
+}
 .nav__link {
 	padding: 0 0.5rem;
 	color: white;
