@@ -24,8 +24,6 @@
 				</nav>
 			</section>
 		</main>
-		<footer>
-			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
-		</footer>
+		<?php include __DIR__ . '/../base/Footer.php'; ?>
 	</body>
 </html>
