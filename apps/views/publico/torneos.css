@@ -1,31 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
 /* REGLA GENERAL */
 *,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* General */
+/* CUERPO */
 body {
-	font-size: 65.2%;
-	font-family: "Cinzel", serif;
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Cinzel", serif;
+    background: linear-gradient(rgb(0, 0, 168),
+            black,
+            rgb(0, 0, 168),
+            black);
+    background-size: 400% 400%;
+    animation: move 8s alternate infinite;
 }
-a {
-	text-decoration: none;
+
+/* ANIMACIÓN DEL FONDO */
+@keyframes move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
 }
-img {
-	width: 100%;
-}
+
+/* ICONOS */
 svg {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 /* HEADER */
@@ -46,74 +61,84 @@ svg {
     align-items: center;
     gap: 10px;
 }
-/* MENU HAMBURGUESA */
-.ham_cnt {
-    display: none;
-}
 
-#nav_check {
-    display: none;
-}
 
-#nav_ham {
-    display: none;
-}
 
+/* ENLACES DEL HEADER */
 .nav__link {
-	padding: 0 0.5rem;
-	color: white;
-	font-size: 0.8rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: .2rem .5rem;
-	border-radius: .2rem;
-
-	&:hover {
-		border-bottom: 3px solid white;
-		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-		font-weight: bold;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 3px;
 }
-h1, .p1{
-    color:#ffffff;
-    font-size: 20px;
-    margin:20px;
-    text-align:center;
+
+.nav__link:hover {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+    padding:30px;
+    font-family:Arial,sans-serif;
+    gap: 1rem;
+}
+/* TÍTULO */
+.gestion_titulo {
+    color: white;
+    font-size: 3rem;
     font-family: "Cinzel", serif;
 }
 
-main{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-direction:column;
-    justify-content:space-between;
-    gap:20px;
-    padding:30px;
-    font-family:Arial,sans-serif;
+/* DESCRIPCIÓN */
+.gestion_desc {
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    font-family: "Cinzel", serif;
 }
 
+h2{
+    font-size: 20px;
+}
+h3{
+    font-size: 15px;
+}
+p{
+    font-size: 10px;
+}
 section{
     background: linear-gradient(rgb(241, 238, 238), rgb(201, 194, 194));
     padding:30px 20px;
-    width: 100%;
+    width:100%;
     margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
     width: 100%;
-    max-width: 1200px;
+    gap: 10px;
 }
 
 section h2{
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:10px;
     color:#1e3a8a;
 }
 
 .torneos {
     display: flex;
     Background: white;
+
 }
 
 article{
@@ -151,20 +176,18 @@ button:hover{
     background:#1d4ed8;
     }
     
-footer{
-    color:white;
-    padding:25px;
-    text-align:center;
-    font-size:1.2rem;
+/* FOOTER */
+footer {
+    padding: 25px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
 }
+
 @media(max-width:768px){
 
-body{
-    font-size:60%;
-    height:auto;
-}
-
-.header{
+    /* HEADER */
+    .header{
     flex-direction:column;
     height:auto;
     padding:15px 10px;
@@ -181,64 +204,29 @@ body{
     justify-content:center;
     gap:10px;
 }
-/* MENU HAMBURGUESA */
-    .ham_cnt {
-        position: absolute;
-        right: 10px;
-        color: white;
-        display: block !important;
+
+    .nav__link {
+        padding: 5px;
+        font-size: 0.65rem;
     }
 
-    #nav_check {
-        position: absolute;
-        right: 20px;
-        z-index: 100;
-        margin-top: 4px;
-        opacity: 0;
-        display: block !important;
+    .nav__link svg {
+        width: 17px;
+        height: 17px;
     }
 
-    #nav_ham {
-        position: absolute;
-        right: 7px;
-        display: block !important;
+    /* CONTENIDO PRINCIPAL */
+    main {
+        padding: 20px;
     }
-
-    #nav_check:checked~.header__nav {
-        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-        transform: translateY(0);
-        opacity: 100;
-    }
-
-    /* FIN MENU HAMBUGUESA */
-
-.nav__link{
-    font-size:1rem;
-    padding:5px;
-}
-
-h1{
-    font-size:1.8rem;
-    margin:15px 10px;
-}
-
-.p1{
-    font-size:1rem;
-    margin:10px;
-}
-
-main{
-    padding:15px;
-    gap:15px;
-}
 
 section{
     width:100%;
-    padding:20px 15px;
+    padding:15px 15px;
 }
 
 section h2{
-    font-size:1.5rem;
+    font-size:1.2rem;
 }
 
 .torneos{
@@ -248,7 +236,7 @@ section h2{
 
 article{
     width:100%;
-    padding:15px;
+    padding:10px;
 }
 
 article h3{
@@ -265,13 +253,37 @@ button{
     font-size:1rem;
 }
 
-button:hover{
-    padding:12px;
-}
+    /* TÍTULO */
+    .gestion_titulo {
+        font-size: 2rem;
+    }
 
-footer{
-    font-size:1rem;
-    padding:20px 10px;
-}
+    /* DESCRIPCIÓN */
+    .gestion_desc {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
 
+    /* BOTONES */
+    .gestion__nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .link_gestion {
+        width: 80%;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .link_gestion:hover {
+        padding: 15px 20px;
+    }
+
+   /* FOOTER */
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
 }

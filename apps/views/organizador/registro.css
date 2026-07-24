@@ -1,34 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 /* REGLA GENERAL */
 *,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* General */
+/* CUERPO */
 body {
-	font-size: 65.2%;
-	font-family: "Cinzel", serif;
-	width: 100%;
-	height: 100vh;
-	background: linear-gradient(rgb(0, 0, 168), black, rgb(0, 0, 168), black);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: "Cinzel", serif;
+    background: linear-gradient(rgb(0, 0, 168),
+            black,
+            rgb(0, 0, 168),
+            black);
+    background-size: 400% 400%;
+    animation: move 8s alternate infinite;
 }
-a {
-	text-decoration: none;
+
+/* ANIMACIÓN DEL FONDO */
+@keyframes move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
 }
-img {
-	width: 100%;
-}
+
+/* ICONOS */
 svg {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 /* HEADER */
@@ -37,8 +49,7 @@ svg {
     height: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center
-    ;
+    align-items: center;
 }
 
 .header__logo {
@@ -50,74 +61,61 @@ svg {
     align-items: center;
     gap: 10px;
 }
-/* MENU HAMBURGUESA */
-.ham_cnt {
-    display: none;
-}
 
-#nav_check {
-    display: none;
-}
 
-#nav_ham {
-    display: none;
-}
+
+/* ENLACES DEL HEADER */
 .nav__link {
-	padding: 0 0.5rem;
-	color: white;
-	font-size: 0.8rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: .2rem .5rem;
-	border-radius: .2rem;
-
-	&:hover {
-		border-bottom: 3px solid white;
-		transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-		font-weight: bold;
-	}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-radius: 3px;
 }
 
-
-img{
-    width: 100px;
-    height: auto;
-    display: block;
-}
-
-h1,p{
-    font-family: "Cinzel", serif;
-    color:#ffffff;
-    font-size: 20px;
-    margin:20px;
-    text-align:center;
-}
-p1{
-    font-size: 15px;
-    margin:20px;
-    text-align:center;
+.nav__link:hover {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 main{
-    width:80%;
-    height: 90vh;
+    margin: 2rem 0;
+    padding: 0 150px;
     font-family:Arial,sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+/* TÍTULO */
+.gestion_titulo {
+    margin: 30px;
+    color: white;
+    font-size: 2rem;
+    font-family: "Cinzel", serif;
+}
+p1{
+    font-size: 15px;
+}
+h2{
+    font-size: 1rem;
+}
+h3{
+    font-size: 13px;
+}
 
 .formulario{
     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
-    padding:30px 20px;
+    padding:20px;
     width: 100%;
     margin-bottom:10px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-    width: 100%;
-    max-width: 1200px;
 }
 .presentacion{
     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
@@ -126,8 +124,6 @@ main{
     margin-bottom:20px;
     border-radius:8px;
     box-shadow:0 2px 5px gray;
-    width: 100%;
-    max-width: 1200px;
 }
 
 form{
@@ -136,7 +132,7 @@ form{
 }
 
 label{
-    margin-top:10px;
+    margin-top:5px;
     font-size: 15px;
 }
 
@@ -170,15 +166,17 @@ button:hover{
     padding:10px 30px;
     background:#1d4ed8;
 }
-footer{
-    color:white;
-    padding:25px;
-    text-align:center;
-    font-size:1.2rem;
-    
+/* FOOTER */
+footer {
+    padding: 25px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
 }
 @media screen and (max-width: 768px) {
-.header{
+
+    /* HEADER */
+    .header{
     flex-direction:column;
     height:auto;
     padding:15px 10px;
@@ -190,67 +188,32 @@ footer{
 }
 
 .header__nav{
+    display:flex;
     flex-wrap:wrap;
+    justify-content:center;
     gap:10px;
 }
-/* MENU HAMBURGUESA */
-    .ham_cnt {
-        position: absolute;
-        right: 10px;
-        color: white;
-        display: block !important;
+
+    .nav__link {
+        padding: 5px;
+        font-size: 0.65rem;
     }
 
-    #nav_check {
-        position: absolute;
-        right: 20px;
-        z-index: 100;
-        margin-top: 4px;
-        opacity: 0;
-        display: block !important;
-    }
-
-    #nav_ham {
-        position: absolute;
-        right: 7px;
-        display: block !important;
-    }
-
-    #nav_check:checked~.header__nav {
-        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-        transform: translateY(0);
-        opacity: 100;
-    }
-
-    /* FIN MENU HAMBUGUESA */
-
-.nav__link{
-    font-size:1rem;
-}
-
-    .main {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    h1{
-        font-size: 28px;
-        margin: 15px;
-    }
-
-    p{
-        font-size: 16px;
-        margin: 10px;
+    .nav__link svg {
+        width: 17px;
+        height: 17px;
     }
 
     main{
+        padding: 0 20px;
         width: 95%;
         margin: 20px auto;
     }
 
     section{
-        padding: 15px;
-    }
+    width:100%;
+    padding:15px 15px;
+}
 
     input,
     button{
@@ -263,6 +226,10 @@ footer{
     margin: 10px auto;
         padding: 12px;
     }
-
+/* FOOTER */
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
 
 }
