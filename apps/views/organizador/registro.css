@@ -33,20 +33,24 @@ svg {
 
 /* HEADER */
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: 50px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+    ;
 }
+
 .header__logo {
-	width: 50px;
+    width: 50px;
 }
+
 .header__nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+
 .nav__link {
 	padding: 0 0.5rem;
 	color: white;
@@ -63,12 +67,7 @@ svg {
 		font-weight: bold;
 	}
 }
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+
 
 img{
     width: 100px;
@@ -183,6 +182,36 @@ footer{
     flex-wrap:wrap;
     gap:10px;
 }
+/* MENU HAMBURGUESA */
+    .ham_cnt {
+        position: absolute;
+        right: 10px;
+        color: white;
+        display: block !important;
+    }
+
+    #nav_check {
+        position: absolute;
+        right: 20px;
+        z-index: 100;
+        margin-top: 4px;
+        opacity: 0;
+        display: block !important;
+    }
+
+    #nav_ham {
+        position: absolute;
+        right: 7px;
+        display: block !important;
+    }
+
+    #nav_check:checked~.header__nav {
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateY(0);
+        opacity: 100;
+    }
+
+    /* FIN MENU HAMBUGUESA */
 
 .nav__link{
     font-size:1rem;

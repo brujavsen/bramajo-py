@@ -16,12 +16,10 @@ body {
     flex-direction: column;
     overflow: hidden;
     font-family: "Cinzel", serif;
-    background: linear-gradient(
-        rgb(0, 0, 168),
-        black,
-        rgb(0, 0, 168),
-        black
-    );
+    background: linear-gradient(rgb(0, 0, 168),
+            black,
+            rgb(0, 0, 168),
+            black);
     background-size: 400% 400%;
     animation: move 8s alternate infinite;
 }
@@ -64,6 +62,19 @@ svg {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+/* MENU HAMBURGUESA */
+.ham_cnt {
+    display: none;
+}
+
+#nav_check {
+    display: none;
+}
+
+#nav_ham {
+    display: none;
 }
 
 /* ENLACES DEL HEADER */
@@ -150,6 +161,7 @@ footer {
     text-align: center;
     font-size: 1.2rem;
 }
+
 @media screen and (max-width: 768px) {
 
     /* CUERPO */
@@ -159,24 +171,56 @@ footer {
 
     /* HEADER */
     .header {
-        height: auto;
-        min-height: 60px;
-        padding: 10px;
         flex-direction: column;
+        height: auto;
         gap: 10px;
     }
 
     .header__logo {
-        width: 45px;
+        width: 70px;
+        position: absolute;
+        left: 20px;
     }
 
     .header__nav {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 5px;
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateY(-100px);
+
     }
 
+    /* MENU HAMBURGUESA */
+    .ham_cnt {
+        position: absolute;
+        right: 10px;
+        color: white;
+        display: block !important;
+    }
+
+    #nav_check {
+        position: absolute;
+        right: 20px;
+        z-index: 100;
+        margin-top: 4px;
+        opacity: 0;
+        display: block !important;
+    }
+
+    #nav_ham {
+        position: absolute;
+        right: 7px;
+        display: block !important;
+    }
+
+    #nav_check:checked~.header__nav {
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateY(0);
+        opacity: 100;
+    }
+
+    /* FIN MENU HAMBUGUESA */
     .nav__link {
         padding: 5px;
         font-size: 0.65rem;
