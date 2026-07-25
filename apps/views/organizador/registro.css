@@ -85,7 +85,7 @@ svg {
 
 main{
     margin: 2rem 0;
-    padding: 0 150px;
+    padding: 0 70px;
     font-family:Arial,sans-serif;
     display: flex;
     justify-content: center;
@@ -168,6 +168,7 @@ button:hover{
 }
 /* FOOTER */
 footer {
+    margin-top: auto;
     padding: 25px;
     color: white;
     text-align: center;

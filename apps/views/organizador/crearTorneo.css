@@ -85,65 +85,48 @@ svg {
 
 /* CONTENIDO PRINCIPAL */
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    text-align: center;
-    padding:30px;
-    font-family:Arial,sans-serif;
-    gap: 1rem;
-}
-h1,p{
-    font-family: "Cinzel", serif;
-    color:#ffffff;
-    font-size: 20px;
-    margin:20px;
-    text-align:center;
-}
-
-.p1{
-    color:black;
-    font-size: 15px;
-    margin:20px;
-    text-align:center;
-}
-
-nav{
-    
-    text-align:center;
-}
-
-main{
-    width:80%;
-    margin:30px auto;
+    margin: 2rem 0;
+    padding: 0 30px;
     font-family:Arial,sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
+}
+h2{
+    font-size:20px;
+}
+p1{
+    font-size:15px;
+
+}
+.gestion_titulo {
+    color: white;
+    font-size: 3rem;
+    font-family: "Cinzel", serif;
+}
+
+/* DESCRIPCIÓN */
+.gestion_desc {
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    font-family: "Cinzel", serif;
+    text-align: center;
+
 }
 
 .titulo{
     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
-    padding:30px 20px;
+    padding:15px;
     width: 100%;
-    margin-bottom:10px;
     border-radius:8px;
-    box-shadow:0 2px 5px gray;
-    width: 100%;
-    max-width: 1200px;
 }
 .formulario{
     background: linear-gradient(rgb(255, 255, 255), rgb(169, 169, 169));
-    padding:30px 20px;
+    padding:20px;
     width: 100%;
-    margin-bottom:10px;
     border-radius:8px;
-    box-shadow:0 2px 5px gray;
-    width: 100%;
-    max-width: 1200px;
 }
 
 form{
@@ -181,19 +164,17 @@ button:hover{
     padding:10px 30px;
     background:#1d4ed8;
 }
-footer{
-    color:white;
-    padding:25px;
-    text-align:center;
-    font-size:1.2rem;
+/* FOOTER */
+footer {
+    margin-top: auto;
+    padding: 25px;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
 }
 @media screen and (max-width: 768px) {
-
-body{
-    height:auto;
-}
-
-.header{
+    /* HEADER */
+    .header{
     flex-direction:column;
     height:auto;
     padding:15px 10px;
@@ -205,79 +186,47 @@ body{
 }
 
 .header__nav{
+    display:flex;
     flex-wrap:wrap;
+    justify-content:center;
     gap:10px;
 }
-/* MENU HAMBURGUESA */
-    .ham_cnt {
-        position: absolute;
-        right: 10px;
-        color: white;
-        display: block !important;
+
+    .nav__link {
+        padding: 5px;
+        font-size: 0.65rem;
     }
 
-    #nav_check {
-        position: absolute;
-        right: 20px;
-        z-index: 100;
-        margin-top: 4px;
-        opacity: 0;
-        display: block !important;
+    .nav__link svg {
+        width: 17px;
+        height: 17px;
     }
 
-    #nav_ham {
-        position: absolute;
-        right: 7px;
-        display: block !important;
+    /* CONTENIDO PRINCIPAL */
+    main {
+        padding: 20px;
     }
 
-    #nav_check:checked~.header__nav {
-        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-        transform: translateY(0);
-        opacity: 100;
+.torneos{
+    flex-direction:column;
+    gap:15px;
+}
+
+    /* TÍTULO */
+    .gestion_titulo {
+        font-size: 2rem;
     }
 
-    /* FIN MENU HAMBUGUESA */
+    /* DESCRIPCIÓN */
+    .gestion_desc {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
 
-.nav__link{
-    font-size:1rem;
-}
-
-main{
-    width:95%;
-    margin:20px auto;
-}
-
-.titulo,
-.formulario{
-    padding:20px 15px;
-}
-
-h1{
-    font-size:1.8rem;
-}
-
-p{
-    font-size:1rem;
-    margin:10px;
-}
-
-.p1{
-    font-size:0.9rem;
-    margin:10px;
-}
-
-label{
-    font-size:1rem;
-}
-
-input{
-    font-size:1rem;
-}
-
-footer{
-    font-size:1rem;
-    padding:20px 10px;
-}
+ /* FOOTER */
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
 
 }
