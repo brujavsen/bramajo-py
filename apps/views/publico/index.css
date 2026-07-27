@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    font-family:"Cinzel",serif;
+    background:linear-gradient(rgb(0,0,168),#000,rgb(0,0,168),#000);
+    background-size:400% 400%;
+    animation:move 8s alternate infinite;
+}
+
+@keyframes move{
+    0%{background-position:0 50%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0}
+}
+
+svg{width:20px;height:20px}
+
+.header{
+    height:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header__logo{width:50px}
+
+.header__nav,
+.gestion,
+.gestion__nav{
+    display:flex;
+    align-items:center;
+}
+
+.header__nav{gap:10px}
+
+.gestion{
+    width:80%;
+    max-width:1300px;
+    flex-direction:column;
+    justify-content:center;
+    gap:40px;
+}
+
+.gestion__nav{
+    justify-content:center;
+    gap:5rem;
+}
+
+.ham_cnt,
+#nav_check,
+#nav_ham{
+    display:none;
+}
+
+.nav__link{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    padding:5px 10px;
+    color:#fff;
+    font-size:.8rem;
+    text-decoration:none;
+    border-radius:3px;
+}
+
+.nav__link:hover{
+    border-bottom:3px solid #fff;
+    font-weight:bold;
+    transition:.3s cubic-bezier(.19,1,.22,1);
+}
+
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px;
+}
+
+.gestion_titulo{
+    color:#fff;
+    font-size:3.5rem;
+}
+
+.gestion_desc{
+    color:#e7e7e7;
+    font-size:2rem;
+}
+
+.link_gestion{
+    padding:20px 45px;
+    color:#fff;
+    background:#2563eb;
+    font-size:1.5rem;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    transition:.3s cubic-bezier(.19,1,.22,1);
+}
+
+.link_gestion:hover{
+    padding:20px 60px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+footer{
+    padding:25px;
+    color:#fff;
+    text-align:center;
+    font-size:1.2rem;
+}
+@media screen and (max-width: 768px) {
+
+    /* CUERPO */
+    body {
+        overflow: hidden;
+    }
+
+    /* HEADER */
+    .header {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .header__logo {
+        width: 70px;
+        position: absolute;
+        left: 20px;
+    }
+
+    .header__nav {
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateY(-100px);
+
+    }
+
+    /* MENU HAMBURGUESA */
+    .ham_cnt {
+        position: absolute;
+        right: 10px;
+        color: white;
+        display: block !important;
+    }
+
+    #nav_check {
+        position: absolute;
+        right: 20px;
+        z-index: 100;
+        margin-top: 4px;
+        opacity: 0;
+        display: block !important;
+    }
+
+    #nav_ham {
+        position: absolute;
+        right: 7px;
+        display: block !important;
+    }
+
+    #nav_check:checked~.header__nav {
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: translateY(0);
+        opacity: 100;
+    }
+
+    /* FIN MENU HAMBUGUESA */
+    .nav__link {
+        padding: 5px;
+        font-size: 0.65rem;
+    }
+
+    .nav__link svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    main {
+        padding: 20px;
+    }
+
+    /* SECCIÓN */
+    .gestion {
+        width: 100%;
+        gap: 30px;
+    }
+
+    /* TÍTULO */
+    .gestion_titulo {
+        font-size: 2rem;
+    }
+
+    /* DESCRIPCIÓN */
+    .gestion_desc {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    /* BOTONES */
+    .gestion__nav {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .link_gestion {
+        width: 80%;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+    }
+
+    .link_gestion:hover {
+        padding: 15px 20px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+}
