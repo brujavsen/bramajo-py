@@ -125,7 +125,7 @@ svg {
     filter: brightness(60%);
     object-fit: cover;
     border-bottom: 2px solid #0f1c33;
-}
+} 
 
 /* PERFIL */
 .card__profile {
