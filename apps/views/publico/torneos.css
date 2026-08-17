@@ -144,7 +144,6 @@ section {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 5px gray;
-    gap: 10px;
 }
 
 section h2 {
@@ -155,8 +154,8 @@ section h2 {
 
 /* TORNEOS */
 .torneos {
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
     background: white;
     gap: 15px;
 }
@@ -191,11 +190,10 @@ button {
     cursor: pointer;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-button:hover {
+&:hover {
     padding: 12px;
     background: #1d4ed8;
+}
 }
 
 /* FOOTER */
@@ -282,8 +280,7 @@ footer {
 
     /* TORNEOS */
     .torneos {
-        flex-direction: row;
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     /* ARTÍCULOS */
