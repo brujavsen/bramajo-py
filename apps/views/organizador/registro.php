@@ -36,7 +36,7 @@
 
 					<h3>
 						¿Ya tienes una cuenta?
-						<a id="iniciarSesion" href="login.html">Inicia sesión</a>
+						<a id="iniciarSesion" href="login.php">Inicia sesión</a>
 					</h3>
 				</form>
 			</section>

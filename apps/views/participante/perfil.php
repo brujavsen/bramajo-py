@@ -12,7 +12,7 @@
         
         <nav class="header__nav">
 
-            <a class="nav__link" href="../publico/inicio.html">
+            <a class="nav__link" href="../publico/inicio.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -21,7 +21,7 @@
                 Inicio
             </a>
 
-            <a class="nav__link" href="../publico/torneos.html">
+            <a class="nav__link" href="../publico/torneos.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,7 +30,7 @@
                 Torneos
             </a>
 
-            <a class="nav__link" href="../organizador/crearTorneo.html">
+            <a class="nav__link" href="../organizador/crearTorneo.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -39,7 +39,7 @@
                 Crear torneo
             </a>
 
-            <a class="nav__link" href="../participante/perfil.html">
+            <a class="nav__link" href="../participante/perfil.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
