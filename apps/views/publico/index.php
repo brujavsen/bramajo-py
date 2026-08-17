@@ -27,7 +27,7 @@
             </p>
 
             <nav class="gestion__nav">
-                <a class="link_gestion" href="../organizador/login.html">
+                <a class="link_gestion" href="../organizador/login.php">
                     Comenzar
                 </a>
 

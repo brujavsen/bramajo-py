@@ -35,12 +35,12 @@
 
 					<h3>
 						¿No tienes una cuenta?
-						<a id="registrarse" href="registro.html">Regístrate aquí</a>
+						<a id="registrarse" href="registro.php">Regístrate aquí</a>
 					</h3>
 				</form>
 			</section>
 			<button>
-                <a class="link_gestion" href="../publico/inicio.html">
+                <a class="link_gestion" href="../publico/inicio.php">
                     Iniciar Sesión
                 </a>
 			</button>

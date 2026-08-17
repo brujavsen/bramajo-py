@@ -3,16 +3,19 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Inicio</title>
-		<link rel="stylesheet" href="inicio.css" />
+		<title>Crear Torneo</title>
+
+		<link rel="stylesheet" href="crearTorneo.css" />
+		<link rel="stylesheet" href="../base/base.css" />
 	</head>
+
 	<body>
-		<header class="header">
+			 <header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
         
         <nav class="header__nav">
 
-            <a class="nav__link" href="../publico/inicio.html">
+            <a class="nav__link" href="../publico/inicio.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -21,7 +24,8 @@
                 Inicio
             </a>
 
-            <a class="nav__link" href="../publico/torneos.html">
+
+            <a class="nav__link" href="../publico/torneos.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,7 +34,7 @@
                 Torneos
             </a>
 
-            <a class="nav__link" href="../organizador/crearTorneo.html">
+            <a class="nav__link" href="../organizador/crearTorneo.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -39,7 +43,7 @@
                 Crear torneo
             </a>
 
-            <a class="nav__link" href="../participante/perfil.html">
+            <a class="nav__link" href="../participante/perfil.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -50,7 +54,42 @@
 
         </nav>
     </header>
-    <footer>
-        <p1>BRAMAJO - Sistema de Gestión de Torneos</p1>
-    </footer>	</body>
+
+		<main>
+			<h1 class="gestion_titulo">CREA TU TORNEO</h1>
+			<p class="gestion_desc">Crea y administra tus competiciones con BRAMAJO</p>
+        <section class="titulo">
+            <h2>Crea tu torneo fácilmente</h2>
+            <p1>Organiza competencias deportivas, eSports o cualquier evento.
+                Completa el formulario y comienza a gestionar participantes.
+            </p1>
+        </section>
+
+        <section class="formulario">
+
+			<section>
+				<h2>Crea tu torneo</h2>
+
+				<form>
+					<label>Nombre del Torneo:</label>
+					<input type="text" placeholder="Ej: Copa Verano" />
+
+					<label>Deporte:</label>
+					<input type="text" placeholder="Ej: Fútbol" />
+
+					<label>Fecha:</label>
+					<input type="date" />
+
+					<label>Cantidad de Equipos:</label>
+					<input type="number" min="2" />
+				</form>
+			</section>
+	
+		</main>
+        </section>
+                <button>Crear Torneo</button>
+        <footer>
+			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
+		</footer>
+	</body>
 </html>

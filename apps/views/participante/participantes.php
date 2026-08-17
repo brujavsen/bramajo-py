@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Perfil</title>
-		<link rel="stylesheet" href="perfil.css" />
+		<title>Participantes</title>
+		<link rel="stylesheet" href="participantes.css" />
 	</head>
 	<body>
-			<header class="header">
+		<header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
         
         <nav class="header__nav">
 
-            <a class="nav__link" href="../publico/inicio.html">
+            <a class="nav__link" href="../publico/inicio.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -21,7 +21,7 @@
                 Inicio
             </a>
 
-            <a class="nav__link" href="../publico/torneos.html">
+            <a class="nav__link" href="../publico/torneos.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -30,7 +30,7 @@
                 Torneos
             </a>
 
-            <a class="nav__link" href="../organizador/crearTorneo.html">
+            <a class="nav__link" href="../organizador/crearTorneo.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -39,7 +39,7 @@
                 Crear torneo
             </a>
 
-            <a class="nav__link" href="../participante/perfil.html">
+            <a class="nav__link" href="../participante/perfil.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -50,57 +50,7 @@
 
         </nav>
     </header>
-		<div class="container">
-			<section class="card">
-				<img
-					class="card__banner"
-					src="../../assets/fondo-perfil-ejemplo.jpg"
-					alt="Fondo de la carta"
-					class="fondoCarta"
-				/>
-
-				<img
-					class="card__profile"
-					src="../../assets/image-perfil-ejemplo.jpg"
-					alt="Foto de perfil"
-					class="fotoPerfil"
-				/>
-
-				<p class="card__name">Cornu Copia</p>
-				<p class="card__job">Coordinador de AUF</p>
-
-				<section class="card__info">
-					<p>Montevideo, Uruguay</p>
-					<p>1500 partidos organizados</p>
-				</section>
-				<div class="card__desc">
-					<h2>Biografía:</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-						explicabo sint sunt impedit laboriosam dolores sapiente, autem
-						perspiciatis veniam dignissimos aperiam quos harum soluta libero? Dolore
-						quibusdam saepe ea autem!
-					</p>
-				</div>
-				<section class="card__follow">
-					<div class="follow__num">
-						<div class="num">
-							<p>67</p>
-							<p>Seguidores</p>
-						</div>
-
-						<div class="num">
-							<p>1,000</p>
-							<p>Seguidos</p>
-						</div>
-					</div>
-
-					<button id="botonSeguir">Seguir</button>
-				</section>
-			</section>
-		</div>
-		<footer>
-			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
-		</footer>
-	</body>
+    <footer>
+        <p1>BRAMAJO - Sistema de Gestión de Torneos</p1>
+    </footer>	</body>
 </html>
