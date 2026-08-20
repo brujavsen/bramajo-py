@@ -10,7 +10,11 @@
 	<body>
 		<header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-        
+          <nav class="header__nav">
+
+            <a class="nav__link" href="../publico/inicio.php">
+                Continuar como invitado
+            </a>
     </header>
 
 		<main>
@@ -39,7 +43,11 @@
 					</h3>
 				</form>
 			</section>
-			<button>Iniciar Sesión</button>
+			<button>
+                <a class="link_gestion" href="../publico/inicio.php">
+                    Iniciar Sesión
+                </a>
+			</button>
 		</main>
 		<footer>
 			<p>BRAMAJO - Sistema de Gestión de Torneos</p>

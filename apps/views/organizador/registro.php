@@ -40,7 +40,10 @@
 					</h3>
 				</form>
 			</section>
-			<button>Crear Cuenta</button>
+			<button><a class="link_gestion" href="../organizador/login.php">
+                    Crear cuenta
+                </a>
+			</button>
 		</main>
 		<footer>
 			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
