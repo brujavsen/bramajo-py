@@ -11,7 +11,12 @@
 	<body>
 		<header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-        
+        <nav class="header__nav">
+
+			<a class="nav__link" href="../publico/iniciox.php">
+				Continuar como invitado
+			</a>
+		</nav>
     </header>
 		<main>
 			<h1 class="gestion_titulo">REGISTRARSE</h1>
@@ -26,13 +31,13 @@
 
 				<form>
 					<label>Nombre:</label>
-					<input type="text" placeholder="Ej: Juan Pérez" />
+					<input type="text" placeholder="Ej: Juan Pérez" required />
 
 					<label>Correo Electrónico:</label>
-					<input type="email" placeholder="Ej: juan@ejemplo.com" />
+					<input type="email" placeholder="Ej: juan@ejemplo.com" required />
 
 					<label>Contraseña:</label>
-					<input type="password" placeholder=" " />
+					<input type="password" placeholder="**********" required />
 
 					<h3>
 						¿Ya tienes una cuenta?

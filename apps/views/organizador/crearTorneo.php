@@ -77,6 +77,14 @@
 					<label>Deporte:</label>
 					<input type="text" placeholder="Ej: Fútbol" />
 
+                    <label>Elije el sistema de emparejamiento:</label>
+					<select>
+						<option value="competitiva">Competitiva</option>
+						<option value="eliminacion">Eliminación directa</option>
+                        <option value="liga">Liga</option>
+						<option value="suizo">Sistema suizo</option>
+					</select>
+
 					<label>Fecha:</label>
 					<input type="date" />
 
