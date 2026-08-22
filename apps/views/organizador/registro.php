@@ -4,7 +4,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Registro</title>
-        <link rel="stylesheet" href="../base/base.css" />
         <link rel="stylesheet" href="registro.css" />
     </head>
 
@@ -28,20 +27,21 @@
 
             <section class="formulario">
                 <h2>Crear Cuenta</h2>
-
+                <!-- Guardar el mensaje de error de validación -->
+                <p id="mensajeError" class="mensaje-error"></p>
                 <!-- Se agrega id al form y name a los inputs -->
                 <form id="formRegistro">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" required />
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan" />
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required />
+                    <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" />
 
                     <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: juan@ejemplo.com" required />
+                    <input type="email" id="email" name="email" placeholder="Ej: juan@ejemplo.com" />
 
                     <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="**********" required />
+                    <input type="password" id="contrasena" name="contrasena" placeholder="**********" />
 
                     <!-- Opcional: define el rol directamente (puedes cambiar 'organizador' por 'participante') -->
                     <input type="hidden" name="rol" value="organizador" />
