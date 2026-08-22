@@ -1,116 +1,85 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id'])) {
+    header('Location: login.php');
+    exit();
+}
+?>
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Crear Torneo</title>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Crear Torneo</title>
 
-		<link rel="stylesheet" href="crearTorneo.css" />
-		<link rel="stylesheet" href="../base/base.css" />
-	</head>
+        <link rel="stylesheet" href="crearTorneo.css" />
+        <link rel="stylesheet" href="../base/base.css" />
+    </head>
 
-	<body>
-			 <header class="header">
-        <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-        
-<<<<<<< HEAD:apps/views/publico/index.html
-        <input type="checkbox" name="nav" id="nav_check">
+    <body>
+        <header class="header">
+            <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
+            
+            <input type="checkbox" name="nav" id="nav_check">
 
-        <!-- nav hamburguesa -->
-        <div class="ham_cnt">
-            <svg id="nav_ham" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </div>
-
-=======
->>>>>>> 64993702419e5d4c80b7219aebefecdf154dfd59:apps/views/organizador/crearTorneo.php
-        <nav class="header__nav">
-
-            <a class="nav__link" href="../publico/inicio.php">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            <div class="ham_cnt">
+                <svg id="nav_ham" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
-                Inicio
-            </a>
+            </div>
 
+            <nav class="header__nav">
+                <a class="nav__link" href="../publico/inicio.php">Inicio</a>
+                <a class="nav__link" href="../publico/torneos.php">Torneos</a>
+                <a class="nav__link" href="../organizador/crearTorneo.php">Crear torneo</a>
+                <a class="nav__link" href="../participante/perfil.php">Perfil</a>
+                
+                <!-- Botón de Cerrar Sesión adentro de la navegación -->
+                <a class="nav__link" href="../../controllers/logoutControllers.php">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+                    </svg>
+                    Cerrar sesión
+                </a>
+            </nav>
+        </header>
 
-            <a class="nav__link" href="../publico/torneos.php">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621.504-1.125 1.125-1.125H20.625Z" />
-                </svg>
-                Torneos
-            </a>
+        <main>
+            <h1 class="gestion_titulo">CREA TU TORNEO</h1>
+            <p class="gestion_desc">Crea y administra tus competiciones con BRAMAJO</p>
 
-            <a class="nav__link" href="../organizador/crearTorneo.php">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516" />
-                </svg>
-                Crear torneo
-            </a>
+            <section class="formulario">
+                <h2>Crea tu torneo</h2>
 
-            <a class="nav__link" href="../participante/perfil.php">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                </svg>
-                Perfil
-            </a>
+                <form id="formCrearTorneo">
+                    <label for="nombre_torneo">Nombre del Torneo:</label>
+                    <input type="text" id="nombre_torneo" name="nombre" placeholder="Ej: Copa Verano" required />
 
-        </nav>
-    </header>
+                    <label for="deporte">Deporte:</label>
+                    <input type="text" id="deporte" name="deporte" placeholder="Ej: Fútbol" required />
 
-		<main>
-			<h1 class="gestion_titulo">CREA TU TORNEO</h1>
-			<p class="gestion_desc">Crea y administra tus competiciones con BRAMAJO</p>
-        <section class="titulo">
-            <h2>Crea tu torneo fácilmente</h2>
-            <p1>Organiza competencias deportivas, eSports o cualquier evento.
-                Completa el formulario y comienza a gestionar participantes.
-            </p1>
-        </section>
-
-        <section class="formulario">
-
-			<section>
-				<h2>Crea tu torneo</h2>
-
-				<form>
-					<label>Nombre del Torneo:</label>
-					<input type="text" placeholder="Ej: Copa Verano" />
-
-					<label>Deporte:</label>
-					<input type="text" placeholder="Ej: Fútbol" />
-
-                    <label>Elije el sistema de emparejamiento:</label>
-					<select>
-						<option value="competitiva">Competitiva</option>
-						<option value="eliminacion">Eliminación directa</option>
+                    <label for="emparejamiento">Elije el sistema de emparejamiento:</label>
+                    <select id="emparejamiento" name="emparejamiento">
+                        <option value="competitiva">Competitiva</option>
+                        <option value="eliminacion">Eliminación directa</option>
                         <option value="liga">Liga</option>
-						<option value="suizo">Sistema suizo</option>
-					</select>
+                        <option value="suizo">Sistema suizo</option>
+                    </select>
 
-					<label>Fecha:</label>
-					<input type="date" />
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required />
 
-					<label>Cantidad de Equipos:</label>
-					<input type="number" min="2" />
-				</form>
-			</section>
-	
-		</main>
-        </section>
-                <button>Crear Torneo</button>
+                    <label for="cantidad_equipos">Cantidad de Equipos:</label>
+                    <input type="number" id="cantidad_equipos" name="cantidad_equipos" min="2" required />
+
+                    <button type="submit">Crear Torneo</button>
+                </form>
+            </section>
+        </main>
+
         <footer>
-			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
-		</footer>
-	</body>
+            <p>BRAMAJO - Sistema de Gestión de Torneos</p>
+        </footer>
+    </body>
 </html>
