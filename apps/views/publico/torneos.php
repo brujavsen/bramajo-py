@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Torneos</title>
+	<link rel="stylesheet" href="torneos.css" />
+	<link rel="stylesheet" href="../base/base.css" />
+</head>
+
+<body>
+	<header class="header">
+		<img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
+
+		<nav class="header__nav">
+
+			<a class="nav__link" href="../publico/inicio.php">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round"
+						d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+				</svg>
+				Inicio
+			</a>
+			
+			<a class="nav__link" href="torneos.php">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round"
+						d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621.504-1.125 1.125-1.125H20.625Z" />
+				</svg>
+				Torneos
+			</a>
+			
+			<a class="nav__link" href="../participante/perfil.php">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round"
+						d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+				</svg>
+				Perfil
+			</a>
+
+		</nav>
+	</header>
+
+	<main>
+		<h1 class="gestion_titulo">TORNEOS </h1>
+		<p class="gestion_desc">Descubre y participa en los torneos que tenemos en BRAMAJO.</p>
+		<section class="torneos">
+
+			<section>
+				<h2>Torneos Pendientes</h2>
+
+				<article>
+					<h3>Copa Alejito</h3>
+					<p>Deporte: Voley</p>
+					<p>Fecha de inicio: 29/08/2026</p>
+					<button>Ver detalles</button>
+				</article>
+	
+				<article>
+					<h3>Torneo Parroquia</h3>
+					<p>Deporte: Fútbol</p>
+					<p>Fecha de inicio: 20/08/2026</p>
+					<button>Ver detalles</button>
+				</article>
+			</section>
+			
+			<section>
+				<h2>Torneos en Activo</h2>
+	
+				<article>
+					<h3>Liga Interior</h3>
+					<p>Deporte: Ajedrez</p>
+					<p>Ronda: Semifinales</p>
+					<button>Ver resultados</button>
+				</article>
+	
+				<article>
+					<h3>Copa Liberetadores</h3>
+					<p>Deporte: Tenis</p>
+					<p>Ronda: Cuartos de final</p>
+					<button>Ver resultados</button>
+				</article>
+			</section>
+
+			<section>
+
+				<h2>Torneos Finalizados</h2>
+	
+				<article>
+					<h3>Copa Verano</h3>
+					<p>Deporte: Padel</p>
+					<p>Campeón: Nacional</p>
+					<button>Ver clasificación</button>
+				</article>
+	
+				<article>
+					<h3>Torneo Sub15</h3>
+					<p>Deporte: Handball</p>
+					<p>Campeón: Peñarol</p>
+					<button>Ver clasificación</button>
+				</article>
+			</section>
+		</section>
+	</main>
+	<footer>
+		<p1>BRAMAJO - Sistema de Gestión de Torneos</p1>
+	</footer>
+</body>
+
+</html>

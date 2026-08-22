@@ -3,18 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Torneos</title>
-		<link rel="stylesheet" href="torneos.css" />
+		<title>Crear Torneo</title>
+
+		<link rel="stylesheet" href="crearTorneo.css" />
 		<link rel="stylesheet" href="../base/base.css" />
 	</head>
 
 	<body>
-		 <header class="header">
+			 <header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-    
+        
+<<<<<<< HEAD:apps/views/publico/index.html
+        <input type="checkbox" name="nav" id="nav_check">
+
+        <!-- nav hamburguesa -->
+        <div class="ham_cnt">
+            <svg id="nav_ham" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+
+=======
+>>>>>>> 64993702419e5d4c80b7219aebefecdf154dfd59:apps/views/organizador/crearTorneo.php
         <nav class="header__nav">
 
-            <a class="nav__link" href="../publico/index.html">
+            <a class="nav__link" href="../publico/inicio.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -23,16 +37,8 @@
                 Inicio
             </a>
 
-            <a class="nav__link" href="../organizador/login.html">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                </svg>
-                Iniciar Sesion
-            </a>
 
-            <a class="nav__link" href="torneos.html">
+            <a class="nav__link" href="../publico/torneos.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +47,7 @@
                 Torneos
             </a>
 
-            <a class="nav__link" href="../organizador/crearTorneo.html">
+            <a class="nav__link" href="../organizador/crearTorneo.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -50,7 +56,7 @@
                 Crear torneo
             </a>
 
-            <a class="nav__link" href="../participante/perfil.html">
+            <a class="nav__link" href="../participante/perfil.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -63,66 +69,48 @@
     </header>
 
 		<main>
-			<h1 class="gestion_titulo">TORNEOS </h1>
-			<p class="gestion_desc">Descubre y participa en los torneos que tenemos en BRAMAJO.</p>
-			<section class="torneos">
-				<section>
-					<h2>Torneos Pendientes</h2>
+			<h1 class="gestion_titulo">CREA TU TORNEO</h1>
+			<p class="gestion_desc">Crea y administra tus competiciones con BRAMAJO</p>
+        <section class="titulo">
+            <h2>Crea tu torneo fácilmente</h2>
+            <p1>Organiza competencias deportivas, eSports o cualquier evento.
+                Completa el formulario y comienza a gestionar participantes.
+            </p1>
+        </section>
 
-					<article>
-						<h3>Copa Alejito</h3>
-						<p>Deporte: Voley</p>
-						<p>Fecha de inicio: 29/08/2026</p>
-						<button>Ver detalles</button>
-					</article>
+        <section class="formulario">
 
-					<article>
-						<h3>Torneo Parroquia</h3>
-						<p>Deporte: Fútbol</p>
-						<p>Fecha de inicio: 20/08/2026</p>
-						<button>Ver detalles</button>
-					</article>
-				</section>
+			<section>
+				<h2>Crea tu torneo</h2>
 
-				<section>
-					<h2>Torneos en Activo</h2>
+				<form>
+					<label>Nombre del Torneo:</label>
+					<input type="text" placeholder="Ej: Copa Verano" />
 
-					<article>
-						<h3>Liga Interior</h3>
-						<p>Deporte: Ajedrez</p>
-						<p>Ronda: Semifinales</p>
-						<button>Ver resultados</button>
-					</article>
+					<label>Deporte:</label>
+					<input type="text" placeholder="Ej: Fútbol" />
 
-					<article>
-						<h3>Copa Liberetadores</h3>
-						<p>Deporte: Tenis</p>
-						<p>Ronda: Cuartos de final</p>
-						<button>Ver resultados</button>
-					</article>
-				</section>
+                    <label>Elije el sistema de emparejamiento:</label>
+					<select>
+						<option value="competitiva">Competitiva</option>
+						<option value="eliminacion">Eliminación directa</option>
+                        <option value="liga">Liga</option>
+						<option value="suizo">Sistema suizo</option>
+					</select>
 
-				<section>
-					<h2>Torneos Finalizados</h2>
+					<label>Fecha:</label>
+					<input type="date" />
 
-					<article>
-						<h3>Copa Verano</h3>
-						<p>Deporte: Padel</p>
-						<p>Campeón: Nacional</p>
-						<button>Ver clasificación</button>
-					</article>
-
-					<article>
-						<h3>Torneo Sub15</h3>
-						<p>Deporte: Handball</p>
-						<p>Campeón: Peñarol</p>
-						<button>Ver clasificación</button>
-					</article>
-				</section>
+					<label>Cantidad de Equipos:</label>
+					<input type="number" min="2" />
+				</form>
 			</section>
+	
 		</main>
-		 <footer>
-        <p1>BRAMAJO - Sistema de Gestión de Torneos</p1>
-    </footer>
+        </section>
+                <button>Crear Torneo</button>
+        <footer>
+			<p>BRAMAJO - Sistema de Gestión de Torneos</p>
+		</footer>
 	</body>
 </html>
