@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* REGLA GENERAL */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
@@ -21,22 +24,28 @@ body {
         black
     );
     background-size: 400% 400%;
-    animation: move 8s alternate infinite;
+    animation: move 5s alternate infinite;
 }
 
-@keyframes move{
-    0%{background-position:0 50%}
-    50%{background-position:50% 100%}
-    100%{background-position:50% 0}
+/* ANIMACIÓN DEL FONDO */
+@keyframes move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
 }
 
-svg{width:20px;height:20px}
-
-.header{
-    height:50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* ICONOS */
+svg {
+    width: 20px;
+    height: 20px;
 }
 
 /* =========================
@@ -81,9 +90,10 @@ svg{width:20px;height:20px}
     border-radius: 3px;
 }
 
-.gestion_titulo{
-    color:#fff;
-    font-size:3.5rem;
+.nav__link:hover {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .nav__link svg {

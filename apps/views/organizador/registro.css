@@ -29,7 +29,7 @@ body {
         black
     );
     background-size: 400% 400%;
-    animation: move 8s alternate infinite;
+    animation: move 5s alternate infinite;
 }
 
 

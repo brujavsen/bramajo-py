@@ -16,7 +16,7 @@
 
          <nav class="header__nav">
 
-        <li><a class="nav__link" href="#gestion">Portada</a></li>
+        <li><a class="nav__link" href="index.php">Portada</a></li>
         <li><a class="nav__link" href="#quienes_somos">Quienes somos</a></li>
         <li><a class="nav__link" href="../index/contenido.html">Contenido</a></li>
         <li><a class="nav__link" href="../index/contacto.html">Contacto</a></li>
