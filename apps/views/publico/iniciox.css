@@ -164,12 +164,11 @@ footer {
         width: 20px;
         height: 20px;
     }
+       /* FOOTER */
     footer {
-    margin-top: auto;
-    padding: 15px 10px;
-    color: white;
-    text-align: center;
-    font-size: 0.9rem;
-}
+        padding: 25px;
+        font-size: 1.2rem;
+    }
+
 
 }

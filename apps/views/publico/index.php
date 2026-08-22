@@ -11,9 +11,22 @@
 <body>
     
     <header class="header">
+
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-
-
+         <nav class="header__nav">
+        <a class="nav__link" href="index.php">
+                      Portada
+                  </a>
+        <a class="nav__link" href="../index/somos.html">
+                      Quienes somos
+                  </a>
+        <a class="nav__link" href="../index/contenido.html">
+                      Contenido
+                  </a>
+        <a class="nav__link" href="../index/contacto.html">
+                        Contacto
+                  </a>
+        </nav>
     </header>
     <main>
         <section class="gestion">

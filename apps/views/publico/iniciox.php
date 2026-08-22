@@ -29,10 +29,10 @@
                 </svg>
                 Torneos
             </a>
-            <a class="nav__link" href="../organizador/login.php">
+            <a class="nav__link" href="../organizador/registro.php">
         
-                </svg>
-                Iniciar sesión
+               
+                Registrarse
             </a>
 
         </nav>

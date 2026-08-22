@@ -57,11 +57,12 @@ body {
    ========================= */
 
 /* HEADER */
-
 .header {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
     gap: 10px;
@@ -71,9 +72,6 @@ body {
     width: 70px;
 }
 
-
-/* NAVEGACIÓN */
-
 .header__nav {
     display: flex;
     flex-wrap: wrap;
@@ -82,9 +80,7 @@ body {
     gap: 10px;
 }
 
-
-/* ENLACES */
-
+/* ENLACES DEL HEADER */
 .nav__link {
     display: flex;
     justify-content: center;
@@ -97,22 +93,17 @@ body {
     border-radius: 3px;
 }
 
-
-/* ICONOS */
+.nav__link:hover {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
 .nav__link svg {
     width: 17px;
     height: 17px;
 }
 
-
-/* EFECTO HOVER */
-
-.nav__link:hover {
-    border-bottom: 3px solid white;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-}
 footer {
     margin-top: auto;
     padding: 15px 10px;
@@ -169,6 +160,4 @@ footer {
         padding: 25px;
         font-size: 1.2rem;
     }
-
-
 }
