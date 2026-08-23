@@ -17,9 +17,8 @@ if (!isset($_SESSION['usuario_id'])) {
         <link rel="stylesheet" href="../base/base.css" />
     </head>
 
-<<<<<<< HEAD
 	<body>
-			 <header class="header">
+        <header class="header">
         <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
         
         <nav class="header__nav">
@@ -29,17 +28,6 @@ if (!isset($_SESSION['usuario_id'])) {
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-=======
-    <body>
-        <header class="header">
-            <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-            
-            <input type="checkbox" name="nav" id="nav_check">
-
-            <div class="ham_cnt">
-                <svg id="nav_ham" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
->>>>>>> ee0fc2b1a0fcdd43c6ab13aab20cedce5b159c7b
                 </svg>
             </div>
 

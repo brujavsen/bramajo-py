@@ -30,8 +30,6 @@
                 Torneos
             </a>
             <a class="nav__link" href="../organizador/registro.php">
-        
-               
                 Registrarse
             </a>
 

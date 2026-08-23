@@ -43,8 +43,8 @@
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" placeholder="**********" />
 
-                    <!-- Opcional: define el rol directamente (puedes cambiar 'organizador' por 'participante') -->
-                    <input type="hidden" name="rol" value="organizador" />
+                    <!-- Opcional: define el rol directamente -->
+                    <input type="hidden" name="rol" value="participante" />
 
                     <!-- El botón debe estar DENTRO del form y ser type="submit" -->
                     <button type="submit" class="link_gestion">Crear cuenta</button>

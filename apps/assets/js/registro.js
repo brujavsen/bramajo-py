@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Enviamos los datos del formulario al servidor mediante fetch().
             // La dirección apunta al archivo PHP que se encarga
             // de procesar el registro del usuario.
-            const respuesta = await fetch('/PROYECTO/bramajo-py/apps/controllers/usuarioControllers.php', {
+            const respuesta = await fetch('/PROYECTO/apps/controllers/usuarioControllers.php', {
                 // Usamos POST porque estamos enviando información
                 // al servidor.
                 method: 'POST',

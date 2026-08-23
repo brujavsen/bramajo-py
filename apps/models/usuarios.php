@@ -7,7 +7,7 @@ require_once __DIR__ . '/../database/conexion.php';
 function registrarUsuario($pdo, $nombre, $apellido, $email, $contrasena, $rol) {
     // Encriptar la contraseña
     $passHash = password_hash($contrasena, PASSWORD_BCRYPT);
-    $fechaActual = date('d-m-Y');
+    $fechaActual = date('Y-m-d');
 
     $sql = "INSERT INTO usuario (nombre, apellido, email, contrasena, rol, fecha_registro) 
             VALUES (:nombre, :apellido, :email, :contrasena, :rol, :fecha_registro)";
@@ -30,5 +30,12 @@ function registrarUsuario($pdo, $nombre, $apellido, $email, $contrasena, $rol) {
 function obtenerUsuarios($pdo) {
     $stmt = $pdo->query("SELECT id, nombre, apellido, email, rol, fecha_registro FROM usuario");
     return $stmt->fetchAll();
+}
+
+// Obtiene todos los usuarios con email para verificar duplicados e iniciar sesión
+function obtenerUsuarioPorEmail($pdo, $email) {
+    $stmt = $pdo->prepare("SELECT id, nombre, apellido, email, contrasena, rol FROM usuario WHERE email = :email");
+    $stmt->execute(['email' => $email]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 ?>

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // El archivo PHP se encarga de comprobar
             // si los datos de inicio de sesión son correctos.
             const respuesta = await fetch(
-                '/PROYECTO/bramajo-py/apps/controllers/loginControllers.php',
+                '/PROYECTO/apps/controllers/loginControllers.php',
                 {
                     // Utilizamos POST porque estamos enviando
                     // información al servidor.
