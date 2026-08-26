@@ -22,7 +22,7 @@ body {
         black
     );
     background-size: 400% 400%;
-    animation: move 8s alternate infinite;
+    animation: move 5s alternate infinite;
 }
 
 /* ANIMACIÓN DEL FONDO */
@@ -144,6 +144,7 @@ section {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 5px gray;
+    flex-direction: column;
 }
 
 section h2 {
@@ -156,8 +157,8 @@ section h2 {
 .torneos {
     display:grid;
     grid-template-columns: repeat(1, 1fr);
-    background: white;
-    gap: 15px;
+    gap: 15px; 
+    background: transparent;
 }
 
 /* ARTÍCULOS */
