@@ -1,3 +1,7 @@
+<?php
+    $usuarioLogueado = true;
+?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -12,6 +16,9 @@
         
         <nav class="header__nav">
 
+            <?php if ($usuarioLogueado) : ?>
+            <p></p>
+            <?php else : ?>
             <a class="nav__link" href="..\organizador\crearTorneo.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
@@ -20,6 +27,7 @@
                 </svg>
                 Crear Torneo
             </a>
+            <?php endif; ?>
 
             <a class="nav__link" href="../publico/torneos.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

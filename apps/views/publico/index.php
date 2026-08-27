@@ -141,7 +141,7 @@
          </section>
          <!-- SECTION 2 -->
 
-         <section class="contenido">
+         <section class="contenido_invertido">
 
              <div class="descripcion_contenido">
                  <h2 class="titulo2">Se parte del público</h2>
@@ -184,7 +184,7 @@
 
          <!-- SECTION 4 -->
 
-         <section class="contenido">
+         <section class="contenido_invertido">
 
              <div class="descripcion_contenido">
 

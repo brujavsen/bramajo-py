@@ -167,6 +167,8 @@ main {
     padding: 15px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+    /* QUIENES SOMOS  */
 .presentacion,.sobre_bramajo,.objetivo {
     width: 90%;
     max-width: 1300px;
@@ -241,7 +243,8 @@ main {
     margin-bottom: 20px;
     color: #e7e7e7;
 }
-.contenido {
+    /* CONTENIDO */
+.contenido, .contenido_invertido{
     width: 90%;
     padding: 30px 20px;
     background: rgba(13, 13, 13, 0.65);
@@ -258,7 +261,7 @@ main {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-center: center;
+    align-items: center;
 }
 
 .contenidos {
@@ -396,7 +399,7 @@ footer {
     .link_gestion:hover {
         padding: 20px 60px;
     }
-
+    /* TITULOS */
     .titulo1 {
         font-size: 2.5rem;
     }
@@ -405,7 +408,7 @@ footer {
         font-size: 1.8rem;
         
     }
-
+    /* QUIENES SOMOS */
     .somos {
         font-size: 1rem;
         font-family: "Teko", sans-serif;
@@ -418,11 +421,13 @@ footer {
     .card {
         flex: 1;
     }
-
+    /* CONTENIDO */
     .contenido {
         flex-direction: row;
     }
-
+    .contenido_invertido {
+        flex-direction: row-reverse;
+    }
     .contenido_img {
         width: 300px;
     }
