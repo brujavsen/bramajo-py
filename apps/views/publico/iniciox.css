@@ -72,15 +72,30 @@ body {
 }
 
 
+
 /* NAVEGACIÓN */
 
 .header__nav {
+    position: absolute;
+    
+    left: 0;
+    top: 0;
+
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+ 
+
+    width: 200px ;
+    height: 100vh;
+
+    
+     gap: 50px;
+     border: 1px solid rgb(53, 36, 126);
+    padding: 150px 30px 30px 30px;
+     box-sizing: border-box;
+    }
 
 
 /* ENLACES */
@@ -146,7 +161,7 @@ footer {
     /* NAVEGACIÓN */
 
     .header__nav {
-        gap: 10px;
+        gap: 50px;
     }
 
 
