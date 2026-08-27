@@ -18,7 +18,7 @@
 
         <li><a class="nav__link" href="index.php">Portada</a></li>
         <li><a class="nav__link" href="#quienes_somos">Quienes somos</a></li>
-        <li><a class="nav__link" href="../index/contenido.html">Contenido</a></li>
+        <li><a class="nav__link" href="#contenido">Contenido</a></li>
         <li><a class="nav__link" href="../index/contacto.html">Contacto</a></li>
 
         </nav>
@@ -63,7 +63,7 @@
         </section>
 
 
-        <section class="sobre-bramajo">
+        <section class="sobre_bramajo">
 
             <h2 class="titulo2">¿Qué es BRAMAJO?</h2>
 
@@ -88,7 +88,7 @@
                         Los usuarios pueden encontrar torneos y participar en ellos.
                     </p>
                 </div>
-
+                
                 <div class="card">
                     <h3 class="titulo3">📊 Resultados</h3>
                     <p class="somos">
@@ -96,24 +96,197 @@
                         diferentes torneos.
                     </p>
                 </div>
-
+                
             </div>
-
+            
         </section>
         
         <section class="objetivo">
-
+            
             <h2 class="titulo2">Nuestro objetivo</h2>
-
+            
             <p class="somos">
                 Buscamos que BRAMAJO sea una herramienta práctica, clara y accesible,
                 que permita organizar torneos sin complicaciones y que cualquier
                 usuario pueda utilizar fácilmente.
             </p>
+            
+        </section>
+            <!--  SECTION 1 -->
+        <section id="contenido" >
+            <section">
+
+            <h2 class="gestion_titulo">
+            Informacion
+            </h2>
+            </section>  
+    <section class="contenido">
+            <div class="texto_contenido">
+
+                <h1 class="titulo2">Gestionar torneos de forma simple</h1>
+
+                <p class="contenidos">
+                    BRAMAJO permite organizar competencias deportivas,
+                    torneos y encuentros desde una única plataforma.
+                    La idea es hacer que organizar y participar sea
+                    rápido, sencillo y accesible para todos.
+                </p>
+
+            </div>
+
+            <div class="contenido_img">
+
+                <img
+                    src="../../assets/imagen 1.jpeg"
+                    alt="Organización de un torneo"
+                >
+
+            </div>
+            <!-- SECTION 2 -->
+        </section>
+
+        <section class="contenido">
+
+            <div class="texto_contenido">
+
+                <h2 class="titulo2">Se parte del público</h2>
+
+                <p class="contenidos">
+                    Seguí cada momento de la competencia de forma
+                    simple y rápida. Consultá los próximos partidos,
+                    resultados, posiciones y más información del torneo
+                    sin depender de mensajes o publicaciones externas.
+                </p>
+
+            </div>
+
+            <div class="contenido_img">
+
+                <img
+                    src="../../assets/imagen 2.jpeg"
+                    alt="Resultados de un torneo"
+                >
+
+            </div>
+
+        </section>
+
+            <!-- SECTION 3 -->
+        <section class="contenido">
+
+            <div class="texto_contenido">
+
+                <h2 class="titulo2">Para participar</h2>
+
+                <p class="contenidos">
+                    Participá en torneos creados por los organizadores
+                    y disfrutá de todas las funcionalidades que ofrece
+                    BRAMAJO para seguir y formar parte de una competencia.
+                </p>
+
+            </div>
+
+            <div class="contenido_img">
+
+                <img
+                    src="../../assets/imagen 3.jpeg"
+                    alt="Participantes de un torneo"
+                >
+
+            </div>
+
+        </section>
+
+
+            <!-- SECTION 4 -->
+
+        <section class="contenido">
+
+            <div class="texto_contenido">
+
+                <h2 class="titulo2">Crear tu torneo</h2>
+
+                <p class="contenidos">
+                    Organizá y creá tu torneo de forma gratuita y fácil.
+                    Podés crear tu torneo donde quieras y en cualquier
+                    momento, configurando la información necesaria para
+                    que los participantes puedan conocerlo.
+                </p>
+
+            </div>
+
+            <div class="contenido_img">
+
+                <img
+                    src="../../assets/imagen 4.jpeg"
+                    alt="Crear un torneo"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <section class="tipos">
+
+            <h2 class="titulo1">Tipos de torneos</h2>
+
+            <div class="tipos_">
+
+                <article class="tipo">
+
+                    <h3 class="titulo3">Torneo web</h3>
+
+                    <p class="contenidos">
+                        Competencias organizadas completamente
+                        desde la plataforma.
+                    </p>
+
+                </article>
+
+
+                <article class="tipo">
+
+                    <h3 class="titulo3">Torneo de mesa</h3>
+
+                    <p class="contenidos">
+                        Torneos de juegos de mesa y diferentes
+                        tipos de competencias.
+                    </p>
+
+                </article>
+
+
+                <article class="tipo">
+
+                    <h3 class="titulo3">Deporte físico</h3>
+
+                    <p class="contenidos">
+                        Competencias deportivas como fútbol,
+                        básquet, vóley y otros deportes.
+                    </p>
+
+                </article>
+
+
+                <article class="tipo">
+
+                    <h3 class="titulo3">Otros</h3>
+
+                    <p class="contenidos">
+                        Cualquier otra competencia que pueda
+                        organizarse mediante BRAMAJO.
+                    </p>
+
+                </article>
+
+            </div>
 
         </section>
 
     </main>
+
 
     <footer>
         <p>BRAMAJO - Sistema de Gestión de Torneos</p>

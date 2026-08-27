@@ -167,7 +167,7 @@ main {
     padding: 15px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.presentacion,.sobre-bramajo,.objetivo {
+.presentacion,.sobre_bramajo,.objetivo {
     width: 90%;
     max-width: 1300px;
     padding: 20px 15px;
@@ -235,7 +235,82 @@ main {
     transform: translateY(-5px);
     background: rgba(0, 0, 120, 0.8);
 }
+.titulo_info {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #e7e7e7;
+}
+.contenido {
+    width: 90%;
+    max-width: 1300px;
+    padding: 30px 20px;
+    background: rgba(13, 13, 13, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
 
+.contenidos {
+    text-align: center;
+    line-height: 1.7;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #e7e7e7;
+}
+
+.contenido_img img{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+
+.tipos {
+    width: 90%;
+    max-width: 1300px;
+    padding: 30px 20px;
+    background: rgba(13, 13, 13, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tipos h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tipos_{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tipo {
+    padding: 20px;
+    background: rgba(0, 0, 80, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.tipo:hover{
+    transform: translateY(-5px);
+    background: rgba(0, 0, 120, 0.8);
+}
+
+.tipo h3 {
+    margin-bottom: 10px;
+}
+
+.tipo p {
+    line-height: 1.4;
+}
 
 /* FOOTER */
 footer {
@@ -338,6 +413,29 @@ footer {
     }
 
     .card {
+        flex: 1;
+    }
+
+    .contenido {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contenidos {
+        font-size: 1rem;
+        font-family: "Teko", sans-serif;
+    }
+
+    .contenido_img {
+        width: 35%;
+        color: rgb(238, 255, 0);
+    }
+
+    .tipos_ {
+        flex-direction: row;
+    }
+
+    .tipo {
         flex: 1;
     }
 
