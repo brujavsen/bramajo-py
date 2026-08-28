@@ -53,8 +53,8 @@
 
     <h1>Bienvenid@ a BRAMAJO</h1>
     <p>
-        lorm ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam
+        
+        BRAMAJO es una plataforma de gestión de torneos deportivos que permite a los organizadores crear y administrar torneos de manera eficiente. Los participantes pueden registrarse, consultar información sobre los torneos y mantenerse actualizados con las últimas noticias y resultados.
     </P>
 
     <div class="cards">
@@ -97,17 +97,21 @@
    <button class= "btn-torneo" onclick="window.location.href='../publico/torneos.php'">
     Ver mas torneos
 </button>
-</main>
+
     <footer>
-        <p>BRAMAJO - Sistema de Gestión de Torneos</p>
+        <h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
         <p1>
-            telefono: +54 9 11 1234-5678 | email: info@bramajo.com
+            telefono: +54 9 11 1234-5678 | email: info@bramajo.com  | 
         </p1>
-        <p2>Dirección: Av. Siempre Viva 123, Ciudad, País</p2>
+        <p2>Dirección: Av. Siempre Viva 123 | Ciudad, País</p2>
+        
         <p3>Redes sociales: bramajo en Facebook, @bramajo en Twitter, @bramajo en Instagram</p3>
-        <p4>_________________________________________________________________________________________________________________________________________________ </p4>
+        
         <p5>© 2024 Todos los derechos reservados</p5>
     </footer>	
+
+</main>
+
 
 </body>
 </html>
