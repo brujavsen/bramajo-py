@@ -65,6 +65,7 @@ body {
     align-items: center;
     padding: 15px 10px;
     gap: 10px;
+    
 }
 
 .header__logo {
@@ -95,6 +96,7 @@ body {
     padding: 150px 30px 30px 30px;
      box-sizing: border-box;
     }
+ /*MAIN */
 
  main {
     margin-left: 200px;
@@ -108,7 +110,8 @@ h1 {
     color: white;
     text-align: center;
     font-size: 40px;
-    margin-top: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 p {
@@ -116,15 +119,120 @@ p {
     text-align: center;
     font-size: 1rem;
     margin-top: 20px;
+    margin-left: 20px;
 }
-/* BOTONN */
-button {
-    margin-top: 25px;
-    padding: 10px 20px;
+
+/* CARDS */
+
+.cards {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+   
+
+}
+.card:hover {
+    transform: scale(1.02);
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(0, 0, 80, 0.7);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+
+
+}
+.contenido-card {
+    padding: 20px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+ 
+}
+
+.contenido-card h2 {
+    margin: 0 0 30px 0;
+   
+}
+
+.contenido-card p {
+    margin: 0 0 15px 0;
+    color: #c9c6c6;
+}
+
+/*IMAGENES*/
+
+.card img {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 20px 20px 20px 20px;
+
+
+}
+
+/* BOTONESS*/
+.btn-torneo {
+    margin-top: 30px;
+    padding: 17px 30px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     width: fit-content;
+    background: rgba(0, 0, 80, 0.7);
+    color: rgb(224, 222, 227);
+    font-family: "Cinzel", serif;
+    font-size: 17px;
+}
+
+.btn-torneo:hover {
+    background: rgba(0, 0, 80, 0.9);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-torneo:active {
+    background: rgba(0, 0, 80, 1);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-registro {
+    margin-top: 30px;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: fit-content;
+    background: rgba(0, 0, 80, 0.7);
+    color: rgb(224, 222, 227);
+    font-family: "Cinzel", serif;
+    font-size: 13px;
+}
+.btn-registro:hover{
+    background: rgba(0, 0, 80, 0.9);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn-registro:active{
+    background: rgba(0, 0, 80, 1);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* ENLACES */
@@ -140,6 +248,12 @@ button {
     text-decoration: none;
     border-radius: 3px;
 }
+
+ .nav_volver{
+    font-size: 20px;
+ }
+   
+  
 
 .perfil{ 
     position: absolute;
@@ -158,19 +272,16 @@ button {
 }
 
 
-/* EFECTO HOVER */
 
-.nav__link:hover {
-    border-bottom: 3px solid white;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-}
+
+
 footer {
     margin-top: auto;
     padding: 15px 10px;
     color: white;
     text-align: center;
     font-size: 0.9rem;
+    margin-left: auto;
 }
 
 
@@ -201,15 +312,42 @@ footer {
         gap: 50px;
     }
 
+   
 
-    /* ENLACES */
+    /* BOTONESS */
 
-    .nav__link {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
+.btn-torneo {
+    margin-top: 25px;
+    padding: 17px 30px;
+    background: rgba(52, 122, 252, 0.7);
+    
+}
 
+.btn-torneo:hover {
+    background: rgba(0, 0, 80, 0.9);
+    color: white;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
+.btn-torneo:active {
+    background: rgba(0, 0, 80, 1);    
+    
+}
+
+.btn-registro{
+    margin-top: 25px;
+    padding: 7px 20px;
+    background: rgba(52, 122, 252, 0.7);
+    font-size: 13px;
+}
+
+.btn-registro:hover{
+    background: rgba(0, 0, 80, 0.9);
+}
+
+.btn-registro:active{
+    background: rgba(0, 0, 80, 1); 
+}
     /* ICONOS */
 
     .nav__link svg {
