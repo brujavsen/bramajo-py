@@ -1,3 +1,7 @@
+ <?php
+session_start();
+?>
+ 
  <!doctype html>
  <html lang="en">
 
@@ -33,13 +37,16 @@
              <p class="gestion_desc">
                  Organiza competencias deportivas, mentales y electrónicas desde una única plataforma.
              </p>
-
-             <nav class="gestion__nav">
-                 <a class="link_gestion" href="../organizador/login.php">
-                     Comenzar
-                 </a>
-
-
+                <nav class="boton_comenzar">
+                    <?php if (isset($_SESSION['usuario_id'])):?>
+                        <a class="link_comenzar" href="..\organizador\inicio.php">
+                            Comenzar
+                        </a>
+                        <?php else: ?>
+                            <a class= "link_comenzar" href= "..\publico\inicioP.php">
+                                Comenzar
+                            </a>
+                        <?php endif; ?>
              </nav>
 
          </section>

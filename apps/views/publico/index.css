@@ -140,7 +140,7 @@ main {
 }
 
 /* BOTONES */
-.gestion__nav {
+.boton_comenzar {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -150,7 +150,7 @@ main {
     margin: 10px;
 }
 
-.link_gestion {
+.link_comenzar {
     width: 80%;
     padding: 15px 20px;
     color: white;
@@ -163,7 +163,7 @@ main {
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.link_gestion:hover {
+.link_comenzar:hover {
     padding: 15px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -384,13 +384,13 @@ footer {
     }
 
     /* BOTONES */
-    .gestion__nav {
+    .boton_comenzar {
         width: auto;
         flex-direction: row;
         gap: 5rem;
     }
 
-    .link_gestion {
+    .link_comenzar {
         width: auto;
         padding: 20px 45px;
         font-size: 1.5rem;
