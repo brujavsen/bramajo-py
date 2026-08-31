@@ -23,7 +23,7 @@ session_start();
              <li><a class="nav__link" href="index.php">Portada</a></li>
              <li><a class="nav__link" href="#quienes_somos">Quienes somos</a></li>
              <li><a class="nav__link" href="#contenido">Contenido</a></li>
-             <li><a class="nav__link" href="../index/contacto.html">Contacto</a></li>
+             <li><a class="nav__link" href="#footer">Contacto</a></li>
 
          </nav>
      </header>
@@ -269,11 +269,19 @@ session_start();
 
      </main>
 
-
-     <footer>
-         <p>BRAMAJO - Sistema de Gestión de Torneos</p>
-     </footer>
-
+    <section id="footer">
+    <footer>
+        <h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
+        <p1>
+            telefono: +54 9 11 1234-5678 | email: info@bramajo.com  | 
+        </p1>
+        <p2>Dirección: Av. Siempre Viva 123 | Ciudad, País</p2>
+        
+        <p3>Redes sociales: bramajo en Facebook, @bramajo en Twitter, @bramajo en Instagram</p3>
+        
+        <p5>© 2024 Todos los derechos reservados</p5>
+    </footer>
+    </section>
  </body>
 
  </html>

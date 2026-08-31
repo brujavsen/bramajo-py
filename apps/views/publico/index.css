@@ -318,13 +318,15 @@ main {
     line-height: 1.4;
 }
 
-/* FOOTER */
+
 footer {
-    margin-top: auto;
+    margin-top: 20px;
     padding: 15px 10px;
     color: white;
     text-align: center;
     font-size: 0.9rem;
+    margin-bottom: 20px;
+   
 }
 
 
