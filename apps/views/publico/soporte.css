@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+
+/* =========================
+   REGLA GENERAL
+   ========================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   CUERPO
+   ========================= */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Cinzel", serif;
+
+    background: linear-gradient(
+        rgb(0, 0, 168),
+        black,
+        rgb(0, 0, 168),
+        black
+    );
+
+      background-size: 400% 400%;
+    animation: move 5s alternate infinite;
+}
+
+/* =========================
+   ANIMACIÓN DEL FONDO
+   ========================= */
+
+@keyframes move {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
+}
+
+
+/*=========================
+    MOBILE FIRST
+    =========================*/
+
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+  }
+
+
+.nav__link {
+    color: white;
+    font-size: 0.65rem; 
+    text-decoration: none;
+}
+
+.header__logo {
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+
+     
+    }
+
+.seccionUno{
+    border: 2px solid white;
+     color:white;
+     margin:20px;
+}
+
+.seccionDos{
+ 
+   border: 2px solid white;
+   color:white;
+   margin-bottom: 50px;
+   margin:20px;
+
+}
+
+footer{
+    color:white;
+
+}
+
+h1{
+    display:flex;
+    color:white;
+    justify-content: center;
+}
+
+/* =========================
+   TABLET Y PC
+   ========================= */
+
+@media screen and (min-width: 769px) {
+
+
+.header__nav{
+margin-bottom: 20px;
+
+}
+
+
+
+}
