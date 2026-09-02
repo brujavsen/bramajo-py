@@ -13,7 +13,7 @@
         <nav class="header__nav">
           <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
           
-           <a class="nav__link" href="../publico/inicioP.php">
+           <a class="nav__link" href="../publico/inicio.php">
               
                <- Volver
             </a>

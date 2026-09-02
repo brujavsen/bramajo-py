@@ -1,5 +1,6 @@
 <?php
-    $usuarioLogueado = true;
+    session_start();
+    $usuarioLogueado = isset($_SESSION['usuario']) ;
 ?>
 
 <!doctype html>
@@ -43,9 +44,27 @@
                 Soporte
             </a>
 
-            <button class="btn-registro" onclick="window.location.href='../organizador/registro.php'">
-                Registrate ya
-            </button>
+            <?php if ($usuarioLogueado): ?>
+
+    <button
+        class="btn-registro"
+        onclick="window.location.href='../organizador/crearTorneo.php'">
+        Crear torneo
+    </button>
+
+        <?php else: ?>
+
+    <button
+        class="btn-registro" onclick="window.location.href='../organizador/login.php'">
+        Iniciar sesión
+    </button>
+
+    <button
+        class="btn-registro"onclick="window.location.href='../organizador/registro.php'">
+        Registrate ya
+    </button>
+
+        <?php endif; ?>
         </nav>
     </header>
  
@@ -63,30 +82,63 @@
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Fútbol</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
             <p>📍 Av.Italia-Palermo</p>
             </div>
         </div>
+
+
         <div class="card">
             <img  src="../../assets/imagesUno.jpg" alt="Torneo 2" />
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Baloncesto</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
             <p>📍 Av.Carlos Maria </p>
             </div>
         </div>
+
+
+
         <div class="card"> 
               <img  src="../../assets/imagesDos.jpg" alt="Torneo 3" />
               <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
-                <h2>Torneo de Tenis</h2>
-                <p>📍 Club Deportivo</p>
+                <h2>Torneo de Tenis</h2> 
+
+            <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
+
+            <p>📍 Club Deportivo</p>
              </div>
         </div>
+
+
         <div class="card">
             <img  src="../../assets/images.jpg" alt="Torneo 4" />
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Natación</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+
+            <?php endif; ?>
             <p>📍 Piscina Municipal</p>
             </div>
         </div>
