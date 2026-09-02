@@ -253,11 +253,11 @@ session_start();
                      <h3 class="titulo3">Otros</h3>
 
                      <p class="contenidos">
-                         Cualquier otra competencia que pueda
-                         organizarse mediante BRAMAJO.
-                     </p>
+                        Cualquier otra competencia que pueda
+                        organizarse mediante BRAMAJO.
+                    </p>
 
-                 </article>
+                </article>
 
              </div>
 
