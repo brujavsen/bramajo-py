@@ -141,7 +141,7 @@ main {
 }
 
 /* BOTONES */
-.gestion__nav {
+.boton_comenzar {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -151,7 +151,7 @@ main {
     margin: 10px;
 }
 
-.link_gestion {
+.link_comenzar {
     width: 80%;
     padding: 15px 20px;
     color: white;
@@ -164,10 +164,12 @@ main {
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.link_gestion:hover {
+.link_comenzar:hover {
     padding: 15px 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+    /* QUIENES SOMOS  */
 .presentacion,.sobre_bramajo,.objetivo {
     width: 90%;
     max-width: 1300px;
@@ -242,9 +244,9 @@ main {
     margin-bottom: 20px;
     color: #e7e7e7;
 }
-.contenido {
+    /* CONTENIDO */
+.contenido, .contenido_invertido{
     width: 90%;
-    max-width: 1300px;
     padding: 30px 20px;
     background: rgba(13, 13, 13, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -252,9 +254,69 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.descripcion_contenido {
+    width: 90%;
+    display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+}
+
+.contenidos {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #e7e7e7;
+}
+
+.contenido_img{
+    border-radius: 12px;
+    width: 100%;
+}
+
+
+.tipos {
+    width: 90%;
+    max-width: 1300px;
+    padding: 30px 20px;
+    background: rgba(13, 13, 13, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tipos h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tipos_{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tipo {
+    padding: 20px;
+    background: rgba(0, 0, 80, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.tipo:hover{
+    transform: translateY(-5px);
+    background: rgba(0, 0, 120, 0.8);
+}
+
+.tipo h3 {
+    margin-bottom: 10px;
+}
+
+.tipo p {
+    line-height: 1.4;
 }
 
 .contenidos {
@@ -313,13 +375,14 @@ main {
     line-height: 1.4;
 }
 
-/* FOOTER */
 footer {
-    margin-top: auto;
+    margin-top: 20px;
     padding: 15px 10px;
     color: white;
     text-align: center;
     font-size: 0.9rem;
+    margin-bottom: 20px;
+   
 }
 
 
@@ -379,13 +442,13 @@ footer {
     }
 
     /* BOTONES */
-    .gestion__nav {
+    .boton_comenzar {
         width: auto;
         flex-direction: row;
         gap: 5rem;
     }
 
-    .link_gestion {
+    .link_comenzar {
         width: auto;
         padding: 20px 45px;
         font-size: 1.5rem;
@@ -394,7 +457,7 @@ footer {
     .link_gestion:hover {
         padding: 20px 60px;
     }
-
+    /* TITULOS */
     .titulo1 {
         font-size: 2.5rem;
     }
@@ -403,7 +466,7 @@ footer {
         font-size: 1.8rem;
         
     }
-
+    /* QUIENES SOMOS */
     .somos {
         font-size: 1rem;
         font-family: "Teko", sans-serif;
@@ -414,6 +477,31 @@ footer {
     }
 
     .card {
+        flex: 1;
+    }
+    /* CONTENIDO */
+    .contenido {
+        width: 70%;
+        flex-direction: row;
+    }
+    .contenido_invertido {
+        width: 70%;
+        flex-direction: row-reverse;
+    }
+    .contenido_img {
+        width: 300px;
+    }
+
+    .contenidos {
+        font-size: 1rem;
+        font-family: "Teko", sans-serif;
+    }
+
+    .tipos_ {
+        flex-direction: row;
+    }
+
+    .tipo {
         flex: 1;
     }
 
