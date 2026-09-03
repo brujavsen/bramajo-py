@@ -151,6 +151,22 @@ h1 {
 	gap:7px;
 	margin-top:15px;
 }
+select {
+  height: 40px;
+	padding:0 10px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:8px;
+	border:1px solid rgba(255,255,255,.12);
+	border-radius:10px;
+	background:rgba(52,122,252,.35);
+	color:white;
+	font-family:"Cinzel",serif;
+	font-size:12px;
+	cursor:pointer;
+	transition:.3s ease;
+}
 .filtro {
 	height:36px;
 	padding:0 10px;

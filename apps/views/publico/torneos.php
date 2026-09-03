@@ -34,7 +34,14 @@ $usuarioLogueado=isset($_SESSION['usuario']);
 				<input type="text" placeholder="Buscar torneos" id="buscador">
 			</div>
 			<div class="filtros">
-				<button class="filtro">Deportes</button>
+				<select id="deporte" name="deporte">
+   			 <option value="" disabled selected>Deporte</option>
+   			 <option value="futbol">Fútbol</option>
+    		<option value="basquetbol">Básquetbol</option>
+    		<option value="voleibol">Voleibol</option>
+    		<option value="tenis">Tenis</option>
+    		<option value="handball">Handball</option>
+</select>
 				<button class="filtro">Reciente</button>
 				<button class="filtro">Inscripciones abiertas</button>
 			</div>
