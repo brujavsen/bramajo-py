@@ -145,7 +145,7 @@
 
 
    <button class= "btn-torneo" onclick="window.location.href='../publico/torneos.php'">
-    Ver mas torneos
+    Ver mas 
 </button>
 
     <footer>

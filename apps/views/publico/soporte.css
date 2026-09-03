@@ -20,7 +20,8 @@ body {
     min-height: 100vh;
     margin: 0;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     display: flex;
     flex-direction: column;
@@ -62,15 +63,19 @@ body {
     =========================*/
 
     .header__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding: 10px 20px;
-        background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: rgba(5, 4, 51, 0.8);
         
   }
 
+  h2{
+    color:white;
+    padding: 10px 30px;
+  }
 
 .nav__link {
     color: white;
@@ -79,31 +84,54 @@ body {
 }
 
 .header__logo {
-    width: 70px;
+    width: 50px;
     align-items: center;
     justify-content: center;
 
      
     }
 
-.seccionUno{
-    border: 2px solid white;
-     color:white;
-     margin:20px;
+.seccionUno,
+.seccionDos,
+.seccionTres {
+    color: white;
+    background-color: rgba(10, 15, 35, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+
+    padding: 24px;
+    margin: 20px auto;
+
+    width: 90%;
+    max-width: 850px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-.seccionDos{
- 
-   border: 2px solid white;
-   color:white;
-   margin-bottom: 50px;
-   margin:20px;
-
+.seccionUno p,
+.seccionDos p {
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
-footer{
-    color:white;
+.seccionDos h2 {
+    margin-bottom: 15px;
+}
 
+.seccionDos ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 15px 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+   
 }
 
 h1{
