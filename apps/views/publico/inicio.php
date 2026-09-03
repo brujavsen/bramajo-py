@@ -71,10 +71,8 @@
 <main>
 
     <h1>Bienvenid@ a BRAMAJO</h1>
-    <p>
-        
-        BRAMAJO es una plataforma de gestión de torneos deportivos que permite a los organizadores crear y administrar torneos de manera eficiente. Los participantes pueden registrarse, consultar información sobre los torneos y mantenerse actualizados con las últimas noticias y resultados.
-    </P>
+    <p>BRAMAJO es una plataforma de gestión de torneos deportivos que permite a los organizadores crear y administrar torneos de manera eficiente. Los participantes pueden registrarse, consultar información sobre los torneos y mantenerse actualizados con las últimas noticias y resultados.
+        </p>
 
     <div class="cards">
         <div class="card">

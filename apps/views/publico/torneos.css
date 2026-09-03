@@ -1,317 +1,434 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
-
-/* REGLA GENERAL */
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
 }
-
-/* CUERPO */
+html {
+	width:100%;
+	min-width:0;
+	overflow-x:hidden;
+}
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: "Cinzel", serif;
-    background: linear-gradient(
-        rgb(0, 0, 168),
-        black,
-        rgb(0, 0, 168),
-        black
-    );
-    background-size: 400% 400%;
-    animation: move 5s alternate infinite;
+	width:100%;
+	min-height:100vh;
+	margin:0;
+	display:flex;
+	flex-direction:column;
+	font-family:"Cinzel",serif;
+	background:linear-gradient(rgb(0,0,168),black,rgb(0,0,168),black);
+	background-size:400% 400%;
+	animation:move 5s alternate infinite;
+	color:white;
+	overflow-x:hidden;
 }
-
-/* ANIMACIÓN DEL FONDO */
 @keyframes move {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 50% 100%;
-    }
-
-    100% {
-        background-position: 50% 0;
-    }
+	0% {
+		background-position:0% 50%;
+	}
+	50% {
+		background-position:50% 100%;
+	}
+	100% {
+		background-position:50% 0;
+	}
 }
-
-/* ICONOS */
-svg {
-    width: 17px;
-    height: 17px;
-}
-
-/* =========================
-   MOBILE FIRST
-   ========================= */
-
-/* HEADER */
 .header {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10px;
-    gap: 10px;
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:15px 10px;
+	gap:10px;
 }
-
 .header__logo {
-    width: 70px;
+	width:70px;
+	height:auto;
 }
-
 .header__nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+	gap:10px;
 }
-
-/* ENLACES DEL HEADER */
 .nav__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-    color: white;
-    font-size: 0.65rem;
-    text-decoration: none;
-    border-radius: 3px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	padding:7px 10px;
+	color:white;
+	font-size:.65rem;
+	text-decoration:none;
+	border-radius:5px;
+	transition:.3s ease;
 }
-
 .nav__link:hover {
-    border-bottom: 3px solid white;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+	background:rgba(52,122,252,.5);
 }
-
-/* CONTENIDO PRINCIPAL */
+.btn-registro {
+	padding:7px 15px;
+	border:none;
+	border-radius:8px;
+	cursor:pointer;
+	width:fit-content;
+	background:rgba(52,122,252,.7);
+	color:white;
+	font-family:"Cinzel",serif;
+	font-size:11px;
+	transition:.3s ease;
+}
+.btn-registro:hover {
+	background:rgba(0,0,80,.9);
+	transform:translateY(-2px);
+}
+.btn-registro:active {
+	background:rgba(0,0,80,1);
+	transform:translateY(0);
+}
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    gap: 1rem;
+	width:100%;
+	min-width:0;
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:10px 15px 50px;
+}
+h1 {
+	width:100%;
+	color:white;
+	text-align:center;
+	font-size:40px;
+	margin-top:20px;
+	margin-bottom:30px;
+}
+.busqueda {
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+.buscador {
+	width:95%;
+	height:55px;
+	display:flex;
+	align-items:center;
+	gap:12px;
+	padding:0 15px;
+	background:rgba(0,0,80,.75);
+	border:1px solid rgba(255,255,255,.15);
+	border-radius:18px;
+	box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+.buscador svg {
+	width:23px;
+	height:23px;
+	flex-shrink:0;
+	color:white;
+}
+.buscador input {
+	width:100%;
+	min-width:0;
+	border:none;
+	outline:none;
+	background:transparent;
+	color:white;
+	font-family:"Cinzel",serif;
+	font-size:12px;
+}
+.buscador input::placeholder {
+	color:#cfcfcf;
+}
+.filtros {
+	width:95%;
+	display:flex;
+	justify-content:center;
+	flex-wrap:wrap;
+	gap:7px;
+	margin-top:15px;
+}
+.filtro {
+	height:36px;
+	padding:0 10px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:8px;
+	border:1px solid rgba(255,255,255,.12);
+	border-radius:10px;
+	background:rgba(52,122,252,.35);
+	color:white;
+	font-family:"Cinzel",serif;
+	font-size:10px;
+	cursor:pointer;
+	transition:.3s ease;
+}
+.filtro:hover {
+	background:rgba(52,122,252,.7);
+	transform:translateY(-2px);
+}
+.popular {
+	width:95%;
+	margin:35px auto 0;
+}
+.seccion-titulo {
+	color:white;
+	font-size:23px;
+	margin-bottom:20px;
+}
+.torneos-grid {
+	width:100%;
+	display:grid;
+	grid-template-columns:1fr;
+	gap:15px;
+}
+.torneo-card {
+	width:100%;
+	min-width:0;
+	height:145px;
+	display:flex;
+	align-items:stretch;
+	overflow:hidden;
+	background:rgba(0,0,80,.75);
+	border:1px solid rgba(255,255,255,.12);
+	border-radius:18px;
+	box-shadow:0 5px 20px rgba(0,0,0,.35);
+	transition:transform .3s ease,box-shadow .3s ease,background .3s ease;
+}
+.torneo-card:hover {
+	transform:translateY(-5px);
+	background:rgba(0,0,100,.85);
+	box-shadow:0 10px 25px rgba(0,0,0,.5);
+}
+.torneo-card img {
+	width:32%;
+	min-width:32%;
+	height:100%;
+	object-fit:cover;
+}
+.torneo-info {
+	width:68%;
+	min-width:0;
+	padding:12px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	gap:7px;
+	overflow:hidden;
+}
+.fecha {
+	margin:0;
+	color:#6cff6c;
+	font-size:9px;
+	font-weight:bold;
+}
+.torneo-info h3 {
+	margin:0;
+	color:white;
+	font-size:16px;
+	line-height:1.3;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.ubicacion {
+	margin:0;
+	display:flex;
+	align-items:center;
+	gap:5px;
+	color:#d0d0d0;
+	font-size:9px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.tipos {
+	width:95%;
+	margin:35px auto 0;
+}
+.tipos-grid {
+	width:100%;
+	display:grid;
+	grid-template-columns:1fr;
+	gap:12px;
+}
+.tipo {
+	width:100%;
+	height:60px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:0 22px;
+	border:1px solid rgba(255,255,255,.12);
+	border-radius:18px;
+	background:rgba(0,0,80,.75);
+	color:white;
+	font-family:"Cinzel",serif;
+	cursor:pointer;
+	transition:.3s ease;
+}
+.tipo:hover {
+	background:rgba(52,122,252,.6);
+	transform:translateY(-3px);
 }
 
-/* TÍTULO */
-.gestion_titulo {
-    color: white;
-    font-size: 2rem;
-    font-family: "Cinzel", serif;
+.crear-torneo {
+	width:100%;
+	min-height:95px;
+	margin-top:35px;
+	padding:18px 20px;
+	border:none;
+	border-radius:20px;
+	background:rgba(52,122,252,.7);
+	color:white;
+	font-family:"Cinzel",serif;
+	font-size:16px;
+	font-weight:bold;
+	cursor:pointer;
+	transition:.3s ease;
 }
-
-/* DESCRIPCIÓN */
-.gestion_desc {
-    color: #e7e7e7;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    font-family: "Cinzel", serif;
+.crear-torneo:hover {
+	background:rgba(0,0,80,.9);
+	transform:translateY(-3px);
 }
-
-/* TÍTULOS Y PÁRRAFOS */
-h2 {
-    font-size: 1.2rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
-p {
-    font-size: 1rem;
-}
-
-/* SECCIONES */
-section {
-    background: linear-gradient(
-        rgb(241, 238, 238),
-        rgb(201, 194, 194)
-    );
-    padding: 15px;
-    width: 100%;
-    border-radius: 8px;
-    
-    flex-direction: column;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    color: #1e3a8a;
-}
-
-/* TORNEOS */
-.torneos {
-    display:grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px; 
-    background: transparent;
-}
-
-/* ARTÍCULOS */
-article {
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-article h3 {
-    margin-bottom: 10px;
-}
-
-article p {
-    margin: 6px 0;
-}
-
-/* BOTONES */
-button {
-    width: 100%;
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-&:hover {
-    padding: 12px;
-    background: #1d4ed8;
-}
-}
-
-/* FOOTER */
+/* =========================
+   FOOTER
+   ========================= */
 footer {
-    margin-top: auto;
+    margin-top: 30px;
     padding: 15px 10px;
     color: white;
     text-align: center;
     font-size: 0.9rem;
+    margin-bottom: 20px;
 }
-
-
-/* =========================
-   TABLET Y PC
-   ========================= */
-
-@media screen and (min-width: 769px) {
-
-    /* HEADER */
-    .header {
-        height: 50px;
-        flex-direction: row;
-        padding: 0;
-        gap: 0;
-    }
-
-    .header__logo {
-        width: 50px;
-    }
-
-    .header__nav {
-        gap: 10px;
-    }
-
-    /* ENLACES DEL HEADER */
-    .nav__link {
-        padding: 5px 10px;
-        font-size: 0.8rem;
-    }
-
-    .nav__link svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* CONTENIDO PRINCIPAL */
-    main {
-        padding: 30px;
-    }
-
-    /* TÍTULO */
-    .gestion_titulo {
-        font-size: 3rem;
-    }
-
-    /* DESCRIPCIÓN */
-    .gestion_desc {
-        font-size: 1.5rem;
-        line-height: normal;
-    }
-
-    /* TÍTULOS Y PÁRRAFOS */
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 15px;
-    }
-
-    p {
-        font-size: 10px;
-    }
-
-    /* SECCIONES */
-    section {
-        width: 100%;
-        padding: 30px 20px;
-    }
-
-    section h2 {
-        font-size: 20px;
-    }
-
-    /* TORNEOS */
-    .torneos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* ARTÍCULOS */
-    article {
-        width: auto;
-        padding: 15px;
-    }
-
-    article h3 {
-        font-size: 15px;
-    }
-
-    article p {
-        font-size: 10px;
-    }
-
-    /* BOTONES */
-    button {
-        width: auto;
-        padding: 7px 15px;
-        font-size: 14px;
-    }
-
-    button:hover {
-        padding: 10px 30px;
-    }
-
-    /* FOOTER */
-    footer {
-        padding: 25px;
-        font-size: 1.2rem;
-    }
+@media screen and (min-width:769px) {
+	.header {
+		position:fixed;
+		top:0;
+		left:0;
+		width:220px;
+		height:100vh;
+		padding:25px 0;
+		gap:30px;
+		background:rgba(52,122,252,.35);
+		border-right:1px solid rgb(53,36,126);
+		z-index:1000;
+	}
+	.header__nav {
+		flex-direction:column;
+		gap:10px;
+	}
+	.nav__link {
+		width:80%;
+		min-height:60px;
+		padding:15px 20px;
+		font-size:.8rem;
+		border-radius:8px;
+		border-bottom:1px solid rgba(255,255,255,.2);
+	}
+	.nav__link:hover {
+		padding-left:30px;
+		background:rgba(52,122,252,.7);
+	}
+	.btn-registro {
+		margin-top:25px;
+		padding:10px 20px;
+		font-size:13px;
+	}
+	main {
+		width:calc(100% - 220px);
+		margin-left:220px;
+		padding:30px 40px 50px;
+		overflow-y:auto;
+	}
+	h1 {
+		font-size:42px;
+		margin-top:20px;
+		margin-bottom:35px;
+	}
+	.buscador {
+		width:55%;
+		height:60px;
+		padding:0 20px;
+	}
+	.buscador svg {
+		width:27px;
+		height:27px;
+	}
+	.buscador input {
+		font-size:14px;
+	}
+	.filtros {
+		width:55%;
+		gap:10px;
+	}
+	.filtro {
+		height:40px;
+		padding:0 17px;
+		gap:10px;
+		font-size:12px;
+	}
+	.popular,
+	.tipos {
+		width:95%;
+		max-width:1200px;
+		margin-top:50px;
+	}
+	.seccion-titulo {
+		font-size:28px;
+		margin-bottom:25px;
+	}
+	.torneos-grid,
+	.tipos-grid {
+		grid-template-columns:repeat(3,1fr);
+		gap:25px;
+	}
+	.torneo-card {
+		height:190px;
+		border-radius:20px;
+	}
+	.torneo-card img {
+		width:40%;
+		min-width:40%;
+	}
+	.torneo-info {
+		width:60%;
+		padding:20px;
+		gap:10px;
+	}
+	.fecha {
+		font-size:11px;
+	}
+	.torneo-info h3 {
+		font-size:20px;
+	}
+	.ubicacion {
+		font-size:12px;
+	}
+	.tipos-grid {
+		gap:20px;
+	}
+	.tipo {
+		height:75px;
+		padding:0 30px;
+		border-radius:22px;
+	}
+	.crear-torneo {
+		min-height:110px;
+		margin-top:45px;
+		padding:20px 30px;
+		font-size:20px;
+		border-radius:25px;
+	}
+	footer {
+		width:100%;
+		margin:50px 0 20px;
+		padding:25px;
+		font-size:1rem;
+	}
 }
