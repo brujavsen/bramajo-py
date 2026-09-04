@@ -43,7 +43,7 @@ session_start();
                             Comenzar
                         </a>
                         <?php else: ?>
-                            <a class= "link_comenzar" href= "..\publico\inicioP.php">
+                            <a class= "link_comenzar" href= "..\publico\inicio.php">
                                 Comenzar
                             </a>
                         <?php endif; ?>
