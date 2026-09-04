@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="soporte.css" />
 </head>
 <body>
-    <header>
+    <header class="header">
         
         <nav class="header__nav">
           <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />

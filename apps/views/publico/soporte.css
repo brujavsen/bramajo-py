@@ -19,15 +19,11 @@
 body {
     min-height: 100vh;
     margin: 0;
-
     overflow-x: hidden;
     overflow-y: auto;
-
     display: flex;
     flex-direction: column;
-
     font-family: "Cinzel", serif;
-
     background: linear-gradient(
         rgb(0, 0, 168),
         black,
@@ -61,35 +57,55 @@ body {
 /*=========================
     MOBILE FIRST
     =========================*/
+/* HEADER */
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px;
+}
 
-    .header__nav {
+.header__logo {
+    width: 70px;
+}
+
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 5px 20px;
-    background-color: rgba(5, 4, 51, 0.8);
-        
   }
-
-  h2{
-    color:white;
-    padding: 10px 30px;
-  }
-
-.nav__link {
+  .nav__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
     color: white;
-    font-size: 0.65rem; 
+    font-size: 0.65rem;
     text-decoration: none;
+    border-radius: 3px;
 }
 
-.header__logo {
-    width: 50px;
-    align-items: center;
-    justify-content: center;
+.nav__link:hover {
+    border-bottom: 3px solid white;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
-     
-    }
+
+  h2{
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    color:white;
+    padding: 30px; ;
+  }
 
 .seccionUno,
 .seccionDos,
@@ -145,13 +161,23 @@ h1{
    ========================= */
 
 @media screen and (min-width: 769px) {
+.header {
+        height: 50px;
+        flex-direction: row;
+        padding: 0;
+        gap: 0;
+    }
 
+    .header__logo {
+        width: 50px;
+    }
 
-.header__nav{
-margin-bottom: 20px;
-
-}
-
-
-
+    .header__nav {
+        gap: 10px;
+    }
+     .nav__link {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+  
 }

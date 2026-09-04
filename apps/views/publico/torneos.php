@@ -34,7 +34,7 @@ $usuarioLogueado=isset($_SESSION['usuario']);
 				<input type="text" placeholder="Buscar torneos" id="buscador">
 			</div>
 			<div class="filtros">
-				<select id="deporte" name="deporte">
+				<select id="deporte" class="filtro" name="deporte">
    			 <option value="" disabled selected>Deporte</option>
    			 <option value="futbol">Fútbol</option>
     		<option value="basquetbol">Básquetbol</option>
