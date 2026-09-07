@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $usuarioLogueado = true
+    $usuarioLogueado = true;
 ?>
 
 <!doctype html>
@@ -81,11 +81,7 @@
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Fútbol</h2>
             <p>📍 Av.Italia-Palermo</p>
-            <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
-                   Unirse
-               </button>
-           <?php endif; ?>
+
             </div>
         </div>
 
@@ -96,11 +92,6 @@
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Baloncesto</h2>
             <p>📍 Av.Carlos Maria </p>
-             <?php if ($usuarioLogueado): ?>
-                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
-                    Unirse
-                </button>
-            <?php endif; ?>
             </div>
         </div>
 
@@ -112,11 +103,6 @@
                 <p> Activo ahora 🟢 </p>
                 <h2>Torneo de Tenis</h2>      
                 <p>📍 Club Deportivo</p>
-                <?php if ($usuarioLogueado): ?>
-                     <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
-                        Unirse
-                    </button>
-                <?php endif; ?>
              </div>
         </div>
 
@@ -127,17 +113,10 @@
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Natación</h2>
             <p>📍 Piscina Municipal</p>
-            <?php if ($usuarioLogueado): ?>
-               <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
-                   Unirse
-               </button>
-           <?php endif; ?>
             </div>
         </div>
     </div>
-
-
-
+    
    <button class= "btn-torneo" onclick="window.location.href='../publico/torneos.php'">
     Ver mas 
 </button>

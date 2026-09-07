@@ -222,32 +222,7 @@ main>p {
     transform: translateY(0);
 }
 
-/* =========================
-   BOTÓN UNIRSE
-   ========================= */
-.btn-unirse {
-    padding: 7px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    width: fit-content;
-    background: rgba(52, 122, 252, 0.7);
-    color: white;
-    font-family: "Cinzel", serif;
-    font-size: 13px;
-    transition: 0.3s ease;
-    
-}
 
-.btn-unirse:hover {
-    background: rgba(0, 0, 80, 0.9);
-    transform: translateY(-2px);
-}
-
-.btn-unirse:active {
-    background: rgba(0, 0, 80, 1);
-    transform: translateY(0);
-}
 
 /* =========================
    ICONOS
@@ -363,14 +338,8 @@ footer {
         background: rgba(52, 122, 252, 0.7);
         font-size: 13px;
     }
-    .btn-unirse {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    .card:hover .btn-unirse {
-    opacity: 1;
-    transform: translateY(12px);
-}
+    
+ 
 
     main {
         width: calc(100% - 220px);

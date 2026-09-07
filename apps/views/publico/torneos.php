@@ -1,7 +1,11 @@
 <?php
-session_start();
-$usuarioLogueado=isset($_SESSION['usuario']);
+ session_start();
+    $usuarioLogueado = true;
+
+$filtro = $_GET['filtro'] ?? 'recientes';
 ?>
+
+ <!-- $Filtro recibe el url(lo que se manda) -->
 <!doctype html>
 <html lang="es">
 <head>
@@ -41,63 +45,167 @@ $usuarioLogueado=isset($_SESSION['usuario']);
     		<option value="voleibol">Voleibol</option>
     		<option value="tenis">Tenis</option>
     		<option value="handball">Handball</option>
-</select>
-				<button class="filtro">Reciente</button>
-				<button class="filtro">Inscripciones abiertas</button>
+		</select>
+
+			<!-- Botones de filtro de inscripcion y popularess -->
+				<button class="filtro <?= $filtro === 'recientes' ? 'activo' : '' ?>" 
+				onclick="window.location.href='torneos.php?filtro=recientes'">
+   				 Populares
+			</button>
+
+			<button class="filtro <?= $filtro === 'abiertas' ? 'activo' : '' ?>"
+    	onclick="window.location.href='torneos.php?filtro=abiertas'">
+    		Inscripciones abiertas
+		</button>
 			</div>
 		</section>
+		
+		
+		
+		
 		<section class="popular">
-			<h2 class="seccion-titulo">Popular</h2>
-			<div class="torneos-grid">
-				<article class="torneo-card">
-					<img src="../../assets/Youth-soccer-indiana.jpg" alt="Sub 6 Caval">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Sub 6 Caval</h3>
-						<p class="ubicacion">📍 Av.juan-Palermo</p>
-					</div>
-				</article>
-				<article class="torneo-card">
-					<img src="../../assets/imagesDos.jpg" alt="Amistoso tenis">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Amistoso tenis</h3>
-						<p class="ubicacion">📍 Club Uruguay</p>
-					</div>
-				</article>
-				<article class="torneo-card">
-					<img src="../../assets/Youth-soccer-indiana.jpg" alt="Sub 6 Caval">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Sub 6 Caval</h3>
-						<p class="ubicacion">📍 Av.juan-Palermo</p>
-					</div>
-				</article>
-				<article class="torneo-card">
-					<img src="../../assets/images.jpg" alt="Ciclismo young">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Ciclismo young</h3>
-						<p class="ubicacion">📍 Av.juan-Palermo</p>
-					</div>
-				</article>
-				<article class="torneo-card">
-					<img src="../../assets/imagesDos.jpg" alt="Amistoso tenis">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Amistoso tenis</h3>
-						<p class="ubicacion">📍 Club Uruguay</p>
-					</div>
-				</article>
-				<article class="torneo-card">
-					<img src="../../assets/images.jpg" alt="Amistoso tenis">
-					<div class="torneo-info">
-						<p class="fecha">Fecha: 27/8 - 28/9</p>
-						<h3>Amistoso tenis</h3>
-						<p class="ubicacion">📍 Av.juan-Palermo</p>
-					</div>
-				</article>
-			</div>
+		<?php if ($filtro === 'abiertas'): ?>
+
+    <!-- La seccion esta se va a mostrar cuando el us toque le boton inscripciones abierta -->
+    <section class="popular">
+
+        <h2 class="seccion-titulo">Inscripciones abiertas</h2>
+
+        <div class="torneos-grid">
+
+            <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img
+                    src="../../assets/imagesDos.jpg"
+                    alt="Torneo de tenis"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 15/9 - 30/9</p>
+                    <h3>Torneo de tenis</h3>
+                    <p class="ubicacion">📍 Club Uruguay</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+          		 <?php endif; ?>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img
+                    src="../../assets/images.jpg"
+                    alt="Torneo de ciclismo"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 20/9 - 5/10</p>
+                    <h3>Ciclismo Young</h3>
+                    <p class="ubicacion">📍 Montevideo</p>
+
+                     <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php?filtro=abiertas'">
+                   Unirse
+               </button>
+           		<?php endif; ?>
+                </div>
+            </article>
+		 </div>
+		</section>
+		
+		<?php else: ?>
+
+    <!-- Con el else de lo contrario se muestra esta seccion -->
+    <section class="popular">
+
+        <h2 class="seccion-titulo">Populares</h2>
+
+        <div class="torneos-grid">
+
+            <article class="torneo-card">
+                <img src="../../assets/Youth-soccer-indiana.jpg" alt="Sub 6 Caval">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Sub 6 Caval</h3>
+                    <p class="ubicacion">📍 Av.juan-Palermo</p>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img src="../../assets/imagesDos.jpg" alt="Amistoso tenis">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Amistoso tenis</h3>
+                    <p class="ubicacion">📍 Club Uruguay</p>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img src="../../assets/Youth-soccer-indiana.jpg" alt="Sub 6 Caval">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Sub 6 Caval</h3>
+                    <p class="ubicacion">📍 Av.juan-Palermo</p>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img src="../../assets/images.jpg" alt="Ciclismo young">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Ciclismo young</h3>
+                    <p class="ubicacion">📍 Av.juan-Palermo</p>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img src="../../assets/imagesDos.jpg" alt="Amistoso tenis">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Amistoso tenis</h3>
+                    <p class="ubicacion">📍 Club Uruguay</p>
+                </div>
+            </article>
+
+            <article class="torneo-card">
+                <img src="../../assets/images.jpg" alt="Amistoso tenis">
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 27/8 - 28/9</p>
+                    <h3>Amistoso tenis</h3>
+                    <p class="ubicacion">📍 Av.juan-Palermo</p>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
 		</section>
 		<section class="tipos">
 			<h2 class="seccion-titulo">Tipos</h2>
@@ -119,6 +227,13 @@ $usuarioLogueado=isset($_SESSION['usuario']);
 				</button>
 			<?php endif; ?>
 		</section>
+
+		<?php endif; ?>
+
+	<!-- Se termina la validacion php -->
+
+
+
 		<footer>
 			<h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
 			<p1>
