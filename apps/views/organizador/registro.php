@@ -11,7 +11,7 @@
         <header class="header">
             <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
             <nav class="header__nav">
-                <a class="nav__link" href="../publico/iniciox.php">
+                <a class="nav__link" href="../publico/inicio.php">
                     Continuar como invitado
                 </a>
             </nav>

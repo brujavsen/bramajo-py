@@ -93,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Indicamos a JavaScript a qué página
             // debe enviar al usuario después del login.
-            'redirect' => '../organizador/crearTorneo.php'
+            'redirect' => '../publico/inicio.php'
         ]);
 
     } else {

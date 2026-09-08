@@ -23,7 +23,7 @@ session_start();
              <li><a class="nav__link" href="index.php">Portada</a></li>
              <li><a class="nav__link" href="#quienes_somos">Quienes somos</a></li>
              <li><a class="nav__link" href="#contenido">Contenido</a></li>
-             <li><a class="nav__link" href="../index/contacto.html">Contacto</a></li>
+             <li><a class="nav__link" href="#footer">Contacto</a></li>
 
          </nav>
      </header>
@@ -38,15 +38,10 @@ session_start();
                  Organiza competencias deportivas, mentales y electrónicas desde una única plataforma.
              </p>
                 <nav class="boton_comenzar">
-                    <?php if (isset($_SESSION['usuario_id'])):?>
-                        <a class="link_comenzar" href="..\organizador\inicio.php">
-                            Comenzar
-                        </a>
-                        <?php else: ?>
                             <a class= "link_comenzar" href= "..\publico\inicio.php">
                                 Comenzar
                             </a>
-                        <?php endif; ?>
+                       
              </nav>
 
          </section>
@@ -257,11 +252,11 @@ session_start();
                      <h3 class="titulo3">Otros</h3>
 
                      <p class="contenidos">
-                         Cualquier otra competencia que pueda
-                         organizarse mediante BRAMAJO.
-                     </p>
+                        Cualquier otra competencia que pueda
+                        organizarse mediante BRAMAJO.
+                    </p>
 
-                 </article>
+                </article>
 
              </div>
 
@@ -269,11 +264,19 @@ session_start();
 
      </main>
 
-
-     <footer>
-         <p>BRAMAJO - Sistema de Gestión de Torneos</p>
-     </footer>
-
+    <section id="footer">
+    <footer>
+        <h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
+        <p1>
+            telefono: +54 9 11 1234-5678 | email: info@bramajo.com  | 
+        </p1>
+        <p2>Dirección: Av. Siempre Viva 123 | Ciudad, País</p2>
+        
+        <p3>Redes sociales: bramajo en Facebook, @bramajo en Twitter, @bramajo en Instagram</p3>
+        
+        <p5>© 2024 Todos los derechos reservados</p5>
+    </footer>
+    </section>
  </body>
 
  </html>

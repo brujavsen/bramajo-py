@@ -1,5 +1,6 @@
 <?php
-    $usuarioLogueado = true;
+    session_start();
+    $usuarioLogueado = isset($_SESSION['usuario']) ;
 ?>
 
 <!doctype html>
@@ -34,7 +35,7 @@
             </a>
       
 
-             <a class="nav__link" href="../participante/perfil.php">
+             <a class="nav__link" href="../publico/soporte.php">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -43,19 +44,35 @@
                 Soporte
             </a>
 
-            <button class="btn-registro" onclick="window.location.href='../organizador/registro.php'">
-                Registrate ya
-            </button>
+            <?php if ($usuarioLogueado): ?>
+
+    <button
+        class="btn-registro"
+        onclick="window.location.href='../organizador/crearTorneo.php'">
+        Crear torneo
+    </button>
+
+        <?php else: ?>
+
+    <button
+        class="btn-registro" onclick="window.location.href='../organizador/login.php'">
+        Iniciar sesión
+    </button>
+
+    <button
+        class="btn-registro"onclick="window.location.href='../organizador/registro.php'">
+        Registrate ya
+    </button>
+
+        <?php endif; ?>
         </nav>
     </header>
  
 <main>
 
     <h1>Bienvenid@ a BRAMAJO</h1>
-    <p>
-        
-        BRAMAJO es una plataforma de gestión de torneos deportivos que permite a los organizadores crear y administrar torneos de manera eficiente. Los participantes pueden registrarse, consultar información sobre los torneos y mantenerse actualizados con las últimas noticias y resultados.
-    </P>
+    <p>BRAMAJO es una plataforma de gestión de torneos deportivos que permite a los organizadores crear y administrar torneos de manera eficiente. Los participantes pueden registrarse, consultar información sobre los torneos y mantenerse actualizados con las últimas noticias y resultados.
+        </p>
 
     <div class="cards">
         <div class="card">
@@ -63,30 +80,63 @@
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Fútbol</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
             <p>📍 Av.Italia-Palermo</p>
             </div>
         </div>
+
+
         <div class="card">
             <img  src="../../assets/imagesUno.jpg" alt="Torneo 2" />
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Baloncesto</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
             <p>📍 Av.Carlos Maria </p>
             </div>
         </div>
+
+
+
         <div class="card"> 
               <img  src="../../assets/imagesDos.jpg" alt="Torneo 3" />
               <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
-                <h2>Torneo de Tenis</h2>
-                <p>📍 Club Deportivo</p>
+                <h2>Torneo de Tenis</h2> 
+
+            <?php if ($usuarioLogueado): ?>
+                 <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+            <?php endif; ?>
+
+            <p>📍 Club Deportivo</p>
              </div>
         </div>
+
+
         <div class="card">
             <img  src="../../assets/images.jpg" alt="Torneo 4" />
             <div class="contenido-card">
                 <p> Activo ahora 🟢 </p>
             <h2>Torneo de Natación</h2>
+
+             <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                    Unirse
+                </button>
+
+            <?php endif; ?>
             <p>📍 Piscina Municipal</p>
             </div>
         </div>
@@ -95,7 +145,7 @@
 
 
    <button class= "btn-torneo" onclick="window.location.href='../publico/torneos.php'">
-    Ver mas torneos
+    Ver mas 
 </button>
 
     <footer>
