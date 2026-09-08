@@ -63,17 +63,131 @@ $filtro = $_GET['filtro'] ?? 'recientes';
 		
 		
 		
-		<section class="popular">
+
 		<?php if ($filtro === 'abiertas'): ?>
 
     <!-- La seccion esta se va a mostrar cuando el us toque le boton inscripciones abierta -->
-    <section class="popular">
+    <section class="inscripcionabierta">
 
         <h2 class="seccion-titulo">Inscripciones abiertas</h2>
 
         <div class="torneos-grid">
 
             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
+                <img
+                    src="../../assets/Youth-soccer-indiana.jpg"
+                    alt="Torneo de fútbol"
+                >
+
+                <div class="torneo-info">
+                    <p class="fecha">Fecha: 10/9 - 25/9</p>
+                    <h3>Torneo de fútbol</h3>
+                    <p class="ubicacion">📍 Av. Italia - Palermo</p>
+
+                    <?php if ($usuarioLogueado): ?>
+                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                   Unirse
+               </button>
+        		<?php endif; ?>
+                </div>
+            </article>
+
+             <article class="torneo-card">
                 <img
                     src="../../assets/Youth-soccer-indiana.jpg"
                     alt="Torneo de fútbol"

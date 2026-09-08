@@ -65,12 +65,13 @@ body {
 	text-decoration:none;
 	border-radius:5px;
 	transition:.3s ease;
+	
 }
 .nav__link:hover {
 	background:rgba(52,122,252,.5);
 }
 .btn-registro {
-	padding:7px 15px;
+	padding:15px 30px;
 	border:none;
 	border-radius:8px;
 	cursor:pointer;
@@ -80,6 +81,7 @@ body {
 	font-family:"Cinzel",serif;
 	font-size:11px;
 	transition:.3s ease;
+	margin-top:25px;
 }
 .btn-registro:hover {
 	background:rgba(0,0,80,.9);
@@ -254,7 +256,7 @@ select {
     background: rgba(0, 0, 80, 1);
     transform: translateY(0);
 }
-	.popular {
+	.inscripcionabierta {
 		width:95%;
 		margin:35px auto 0;
 	}
@@ -420,24 +422,45 @@ footer {
 		padding-left:30px;
 		background:rgba(52,122,252,.7);
 	}
-	.btn-registro {
-		margin-top:25px;
-		padding:10px 20px;
-		font-size:13px;
-	}
+.btn-unirse {
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
 
-	.btn-unirse {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-  .cards {
-        width: 90%;
-        grid-template-columns:repeat(2,2fr);
-		gap:25px;
-    }
-   .card:hover .btn-unirse {
+        opacity: 0.3s ease;
+        transform: 0.3s ease;
+        background: 0.3s ease;
+}
+
+.torneo-card:hover .btn-unirse {
     opacity: 1;
-    transform: translateY(12px);
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.inscripcionabierta .torneos-grid {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.popular {
+    width: 95%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.popular .torneos-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
 }
 	main {
 		width:calc(100% - 220px);
@@ -472,7 +495,11 @@ footer {
 		gap:10px;
 		font-size:12px;
 	}
-	.popular,
+	.inscripcionabierta {
+		width:95%;
+		max-width:1200px;
+		margin-top:50px;
+	}
 	.tipos {
 		width:95%;
 		max-width:1200px;
@@ -483,10 +510,12 @@ footer {
 		margin-bottom:25px;
 	}
 	.torneos-grid,
-	.tipos-grid {
-		grid-template-columns:repeat(3,1fr);
-		gap:25px;
-	}
+	.tipos-grid.cards {
+    width:100%;
+	display:grid;
+	flex-wrap:wrap;
+	gap:15px;
+}
 	.torneo-card {
 		height:190px;
 		border-radius:20px;
