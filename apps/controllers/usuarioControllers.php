@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //
     // Si no se recibe ningún rol, se utiliza
     // "participante" como valor predeterminado.
-    $rol = trim($_POST['rol'] ?? 'participante');
+    $rol =  'participante';
 
 
     // Comprobamos que todos los campos obligatorios

@@ -9,48 +9,56 @@
     </head>
 
     <body>
-        <header class="header">
-            <img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
-            <nav class="header__nav">
-                <a class="nav__link" href="../publico/inicio.php">
-                    Continuar como invitado
-                </a>
-            </nav>
-        </header>
+		<header class="header">
+			<img class="header__logo" src="../../assets/bramajo-logo.png" alt="bramajo logo" />
+			<nav class="header__nav">
+				<a class="nav__link" href="../publico/inicio.php">
+					Continuar como invitado
+				</a>
+			</nav>
+		</header>
+		<main>
+	<h1 class="gestion_titulo">INICIAR SESIÓN</h1>
+    <p class="gestion_login">
+	Completa los datos y campos obligatorios para un inicio de sesión exitoso.
+    </p>
+	<form class="formulario" id="formIniciarS">
+		<p id="mensajeError"></p>
 
-        <main>
-            <h1 class="gestion_titulo">INICIAR SESIÓN</h1>
+		<div class="datos">
+			<label for="correo">Correo</label>
+			<input type="email" id="correo" name="correo" placeholder="Ej: Nombre1234@gmail.com" required>
+		</div>
 
-            <section class="presentacion">
-                <h2>Ingresa a tu cuenta para acceder a todos los torneos, competencias y eventos</h2>
-                <p>Por favor, ingresa tu correo y contraseña.</p>
-            </section>
+		<div class="datos">
+			<label for="password">Contraseña</label>
+			<div class="input-password">
+				<input type="password" id="password" name="password" placeholder="Ej: 12345678" required>
+				<button type="button" id="mostrarPassword">👁</button>
+			</div>
+		</div>
 
-            <section class="formulario">
-                <h2>Iniciar Sesión</h2>
+		<button class="btn-iniciarS" type="submit">
+			INICIAR SESIÓN
+		</button>
 
-                <form id="formLogin">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" placeholder="Ej: juan@ejemplo.com" required />
-
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" name="contrasena" placeholder="**********" required />
-
-                    <button type="submit" class="link_gestion">Iniciar Sesión</button>
-
-                    <h3>
-                        ¿No tienes una cuenta?
-                        <a id="registrarse" href="registro.php">Regístrate aquí</a>
-                    </h3>
-                </form>
-            </section>
-        </main>
-
-        <footer>
-            <p>BRAMAJO - Sistema de Gestión de Torneos</p>
-        </footer>
-
-        <!-- Script de JS para enviar las credenciales -->
-        <script src="../../assets/js/login.js"></script>
-    </body>
+		<h3>
+			¿No tienes una cuenta?
+			<a id="Registrarse" href="registro.php">Regístrate aquí</a>
+		</h3>
+	</form>
+</main>
+		<footer>
+			<h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
+        <p1>
+            telefono: +54 9 11 1234-5678 | email: info@bramajo.com  | 
+        </p1>
+        <p2>Dirección: Av. Siempre Viva 123 | Ciudad, País</p2>
+        
+        <p3>Redes sociales: bramajo en Facebook, @bramajo en Twitter, @bramajo en Instagram</p3>
+        
+        <p5>© 2024 Todos los derechos reservados</p5>
+		</footer>
+		<script src="../../assets/js/login.js"></script>
+	</body>
 </html>

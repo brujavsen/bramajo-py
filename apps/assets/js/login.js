@@ -1,82 +1,122 @@
 // Esperamos a que toda la página HTML termine de cargarse.
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Buscamos el formulario de inicio de sesión por su ID.
-    const formLogin = document.getElementById('formLogin');
+	// Buscamos el formulario de inicio de sesión por su ID.
+	const formIniciarS = document.getElementById('formIniciarS');
+	const OJITO = document.getElementById('mostrarPassword');
+	// Si no encontramos el formulario, detenemos el código.
+	// Esto evita errores si el archivo JS se carga en otra página.
+	if (!formIniciarS) return;
 
-    // Si el formulario no existe en la página,
-    // detenemos la ejecución del código.
-    if (!formLogin) return;
+	// Detectamos cuando el usuario intenta enviar el formulario.
+	formIniciarS.addEventListener('submit', async (e) => {
 
+		// Evitamos que el formulario se envíe de la manera tradicional.
+		// Esto permite procesarlo mediante JavaScript y fetch().
+		e.preventDefault();
 
-    // Detectamos cuando el usuario intenta enviar
-    // el formulario de inicio de sesión.
-    formLogin.addEventListener('submit', async (e) => {
+		// Obtenemos el correo que escribió el usuario.
+		// trim() elimina espacios innecesarios al principio y al final.
+		const correo = document.getElementById('correo').value.trim();
 
-        // Evitamos que el formulario se envíe de la manera tradicional.
-        // Esto evita que la página se recargue.
-        e.preventDefault();
+		// Obtenemos la contraseña.
+		const password = document.getElementById('password').value;
 
+		// Buscamos el elemento donde mostraremos los mensajes de error.
+		const mensajeError = document.getElementById('mensajeError');
 
-        // Obtenemos todos los datos que el usuario escribió
-        // en el formulario.
-        const formData = new FormData(formLogin);
+		// Limpiamos cualquier mensaje de error anterior.
+		mensajeError.textContent = '';
 
+		// Expresión regular para comprobar que el correo
+		// tenga un formato básico válido.
+		const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        try {
+		// Comprobamos que el correo tenga un formato válido.
+		if (!correoRegex.test(correo)) {
 
-            // Enviamos los datos al servidor usando fetch().
-            // El archivo PHP se encarga de comprobar
-            // si los datos de inicio de sesión son correctos.
-            const respuesta = await fetch(
-                '/PROYECTO/apps/controllers/loginControllers.php',
-                {
-                    // Utilizamos POST porque estamos enviando
-                    // información al servidor.
-                    method: 'POST',
+			// Mostramos el mensaje de error.
+			mensajeError.textContent = 'Por favor, ingresa un correo electrónico válido.';
 
-                    // Enviamos los datos del formulario.
-                    body: formData
-                }
-            );
+			// Detenemos el envío del formulario.
+			return;
+		}
 
+		// Comprobamos que la contraseña tenga al menos 8 caracteres.
+		if (password.length < 8) {
 
-            // Esperamos la respuesta del servidor
-            // y la convertimos de JSON a un objeto de JavaScript.
-            //
-            // Por ejemplo, PHP podría responder:
-            //
-            // {
-            //     "success": true,
-            //     "redirect": "inicio.php"
-            // }
-            const resultado = await respuesta.json();
+			// Mostramos el mensaje de error.
+			mensajeError.textContent = 'La contraseña debe tener al menos 8 caracteres.';
 
+			// Detenemos el envío del formulario.
+			return;
+		}
 
-            // Comprobamos si el inicio de sesión fue exitoso.
-            if (resultado.success) {
+		// FormData toma automáticamente los datos
+		// que tienen atributo name dentro del formulario.
+		const formData = new FormData(formIniciarS);
 
-                // Si fue correcto, enviamos al usuario
-                // a la dirección indicada por el servidor.
-                window.location.href = resultado.redirect;
+		try {
 
-            } else {
+			// Enviamos los datos al controlador PHP mediante fetch().
+			const respuesta = await fetch('/PROYECTO/apps/controllers/usuarioControllers.php', {
 
-                // Si el inicio de sesión falló,
-                // mostramos el mensaje de error enviado por PHP.
-                alert('Error: ' + resultado.message);
-            }
+				// Usamos POST porque estamos enviando información al servidor.
+				method: 'POST',
 
+				// Enviamos los datos del formulario.
+				body: formData
+			});
 
-        } catch (error) {
+			// Comprobamos si el servidor respondió correctamente.
+			// Por ejemplo, un error 404 o 500 hará que esto sea falso.
+			if (!respuesta.ok) {
 
-            // Si ocurre algún problema durante la petición,
-            // mostramos el error en la consola para poder revisarlo.
-            console.error('Error en la petición:', error);
+				// Generamos un error con el código recibido.
+				throw new Error(`Error en el servidor: ${respuesta.status}`);
+			}
 
-            // Mostramos un mensaje al usuario indicando
-            // que ocurrió un problema.
-            alert('Ocurrió un error al intentar iniciar sesión.');
-        }
-    });
+			// Convertimos la respuesta del servidor desde JSON
+			// a un objeto que podamos utilizar en JavaScript.
+			const resultado = await respuesta.json();
+
+			// Comprobamos si el servidor indica que el inicio de sesión
+			// se realizó correctamente.
+			if (resultado.success) {
+
+				// Mostramos el mensaje de éxito.
+				mensajeError.style.color = 'green';
+				mensajeError.textContent = resultado.message;
+
+				// Esperamos un segundo antes de redirigir al usuario.
+				setTimeout(() => {
+
+					// Enviamos al usuario a la página de inicio.
+					window.location.href = '../publico/inicio.php';
+
+				}, 1000);
+
+			} else {
+
+				// Si el servidor indica que hubo un problema,
+				// mostramos el mensaje que envió.
+				mensajeError.style.color = 'crimson';
+				mensajeError.textContent = resultado.message;
+			}
+
+		} catch (error) {
+
+			// Mostramos el error en la consola para poder
+			// encontrar el problema durante el desarrollo.
+			console.error('Error en la solicitud:', error);
+
+			// Mostramos un mensaje al usuario.
+			mensajeError.style.color = 'crimson';
+			mensajeError.textContent = 'No se pudo conectar con el servidor.';
+		}
+	});
+OJITO.addEventListener('click', () => {
+		const passwordInput = document.getElementById('password');
+		passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password'
+	});
 });
