@@ -1,41 +1,115 @@
 <?php
-require_once __DIR__ . '/../database/conexion.php';
 
-/**
- * Registra un nuevo usuario en la base de datos.
- */
-function registrarUsuario($pdo, $nombre, $apellido, $email, $contrasena, $rol) {
-    // Encriptar la contraseña
-    $passHash = password_hash($contrasena, PASSWORD_BCRYPT);
-    $fechaActual = date('Y-m-d');
+class Usuario
+{
+    private $pdo;
 
-    $sql = "INSERT INTO usuario (nombre, apellido, email, contrasena, rol, fecha_registro) 
-            VALUES (:nombre, :apellido, :email, :contrasena, :rol, :fecha_registro)";
-    
-    $stmt = $pdo->prepare($sql);
+    /**
+     * Constructor de la clase Usuario.
+     *
+     * Recibe la conexión a la base de datos.
+     */
+    public function __construct($pdo)
+    {
+        $this->pdo = $pdo;
+    }
 
-    return $stmt->execute([
-        ':nombre'         => $nombre,
-        ':apellido'       => $apellido,
-        ':email'          => $email,
-        ':contrasena'     => $passHash,
-        ':rol'            => $rol,
-        ':fecha_registro' => $fechaActual
-    ]);
+
+    /**
+     * Registra un nuevo usuario.
+     */
+    public function registrar(
+        $nombre,
+        $apellido,
+        $email,
+        $contrasena,
+        $rol
+    ) {
+
+        // Encriptamos la contraseña antes de guardarla.
+        $passHash = password_hash(
+            $contrasena,
+            PASSWORD_BCRYPT
+        );
+
+        // Obtenemos la fecha actual.
+        $fechaActual = date('Y-m-d');
+
+        $sql = "INSERT INTO usuario
+                (
+                    nombre,
+                    apellido,
+                    email,
+                    contrasena,
+                    rol,
+                    fecha_registro
+                )
+                VALUES
+                (
+                    :nombre,
+                    :apellido,
+                    :email,
+                    :contrasena,
+                    :rol,
+                    :fecha_registro
+                )";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        return $stmt->execute([
+            ':nombre'         => $nombre,
+            ':apellido'       => $apellido,
+            ':email'          => $email,
+            ':contrasena'     => $passHash,
+            ':rol'            => $rol,
+            ':fecha_registro' => $fechaActual
+        ]);
+    }
+
+
+    /**
+     * Obtiene todos los usuarios.
+     */
+    public function obtenerTodos()
+    {
+        $sql = "SELECT
+                    id,
+                    nombre,
+                    apellido,
+                    email,
+                    rol,
+                    fecha_registro
+                FROM usuario";
+
+        $stmt = $this->pdo->query($sql);
+
+        return $stmt->fetchAll();
+    }
+
+
+    /**
+     * Busca un usuario utilizando su email.
+     */
+    public function obtenerPorEmail($email)
+    {
+        $sql = "SELECT
+                    id,
+                    nombre,
+                    apellido,
+                    email,
+                    contrasena,
+                    rol
+                FROM usuario
+                WHERE email = :email";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute([
+            ':email' => $email
+        ]);
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 
-/**
- * Obtiene todos los usuarios (para consultas futuras).
- */
-function obtenerUsuarios($pdo) {
-    $stmt = $pdo->query("SELECT id, nombre, apellido, email, rol, fecha_registro FROM usuario");
-    return $stmt->fetchAll();
-}
-
-// Obtiene todos los usuarios con email para verificar duplicados e iniciar sesión
-function obtenerUsuarioPorEmail($pdo, $email) {
-    $stmt = $pdo->prepare("SELECT id, nombre, apellido, email, contrasena, rol FROM usuario WHERE email = :email");
-    $stmt->execute(['email' => $email]);
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-}
 ?>
