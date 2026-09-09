@@ -85,7 +85,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -104,7 +104,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -123,7 +123,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -142,7 +142,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -161,7 +161,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -180,7 +180,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -199,7 +199,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Av. Italia - Palermo</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
         		<?php endif; ?>
@@ -218,7 +218,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Club Uruguay</p>
 
                     <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
           		 <?php endif; ?>
@@ -237,7 +237,7 @@ $filtro = $_GET['filtro'] ?? 'recientes';
                     <p class="ubicacion">📍 Montevideo</p>
 
                      <?php if ($usuarioLogueado): ?>
-                <button class="btn-unirse" onclick="window.location.href='../publico/torneos.php?filtro=abiertas'">
+                <button class="btn-unirse" onclick="mostrarventana()">
                    Unirse
                </button>
            		<?php endif; ?>
@@ -360,5 +360,32 @@ $filtro = $_GET['filtro'] ?? 'recientes';
 			<p5>© 2024 Todos los derechos reservados</p5>
 		</footer>	
 	</main>
+
+    <div class="ventana" id="ventana">
+        <div class="ventana-contenido">
+            <h2>SOLICITA UNIRTE</h2>
+            <button class="cerrar-ventana" onclick="cerrarVentana()">X</button>
+
+        <form id="formulariounirse">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+                <input type="number" id="edad" name= "edad" required>
+
+            <label for="sexo"> Sexo:</label>
+            <select id="sexo" name="sexo" required>
+                <option value="" disabled selected>Selecciona tu sexo</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                </select>
+
+            <label for="experiencia">Experiencia en el deporte:</label>
+            <input type="text" id="experiencia" name="experiencia" required>
+
+            <button type="submit" class="btn-solicitud">Enviar solicitud</button>
+        </form>
+            <script src="../../assets/js/unirse.js"></script>
 </body>
 </html>
