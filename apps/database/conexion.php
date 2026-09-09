@@ -27,6 +27,7 @@ class Conexion
 
             // Configuramos PDO para que lance excepciones
             // cuando ocurra un error.
+            // Se puede omitir
             $this->pdo->setAttribute(
                 PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION
