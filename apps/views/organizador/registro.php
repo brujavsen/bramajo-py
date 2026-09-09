@@ -16,7 +16,10 @@
 			</nav>
 		</header>
 		<main>
-			<h1 class="gestion_titulo">REGISTRARSE</h1>
+		<h1 class="gestion_titulo">REGISTRARSE</h1>
+		<p class="gestion_registro">
+		Completa los datos y campos obligatorios para un registro exitoso.
+    	</p>
 			<form class="formulario" id="formRegistro">
 				<p id="mensajeError"></p>
 				<div class="datos">
@@ -31,14 +34,13 @@
 					<label for="password">Contraseña</label>
 					<div class="input-password">
 						<input type="password" id="password" name="password" placeholder="Ej: 12345678" required>
-						<button type="button" onclick="mostrarPassword('password', this)">👁</button>
+						<button type="button" id="mostrarPassword">👁</button>
 					</div>
 				</div>
-				<div class="datos">
+				<div class="datos"> 
 					<label for="confirmar">Confirmar contraseña</label>
 					<div class="input-password">
 						<input type="password" id="confirmar" name="confirmar" placeholder="Ej: 12345678" required>
-						<button type="button" onclick="mostrarPassword('confirmar', this)">👁</button>
 					</div>
 				</div>
 				<button class="btn-registrar" type="submit">

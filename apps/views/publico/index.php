@@ -38,7 +38,6 @@ session_start();
                  Organiza competencias deportivas, mentales y electrónicas desde una única plataforma.
              </p>
                 <nav class="boton_comenzar">
-
                             <a class= "link_comenzar" href= "..\publico\inicio.php">
                                 Comenzar
                             </a>

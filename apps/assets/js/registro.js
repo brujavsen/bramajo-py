@@ -1,8 +1,11 @@
+
 // Esperamos a que toda la página HTML termine de cargarse.
 document.addEventListener('DOMContentLoaded', () => {
 	// Buscamos el formulario de registro por su ID en la página PHP.
 	const formRegistro = document.getElementById('formRegistro');
-
+	const OJITO = document.getElementById('mostrarPassword');
+	
+	
 	// Si no encontramos el formulario, detenemos el código.
 	// Esto evita que JavaScript intente trabajar con un elemento que no existe.
 	if (!formRegistro) return;
@@ -94,5 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Mostramos un mensaje de error dentro del formulario.
 			mensajeError.textContent = 'No se pudo conectar con el servidor.';
 		}
+	});
+
+	OJITO.addEventListener('click', () => {
+		const passwordInput = document.getElementById('password');
+		const Confirmar = document.getElementById('confirmar');
+		passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+		Confirmar.type = Confirmar.type === 'password' ? 'text' : 'password';
 	});
 });

@@ -12,6 +12,16 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   UTILS
+   ========================= */
+#mensajeError {
+    color: crimson;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* =========================
    CUERPO
@@ -96,7 +106,6 @@ body {
     border-radius: 3px;
 }
 
-
 /* ICONOS */
 
 .nav__link svg {
@@ -116,25 +125,27 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
 }
 
 
 /* TÍTULO */
 
 .gestion_titulo {
-    margin: 30px;
+    margin-top: 30px;
     color: white;
     font-size: 2rem;
     font-family: "Cinzel", serif;
 }
+.gestion_login {
+    margin: 30px;
+	color: white;
+	font-family: "Cinzel", serif;
+	font-size: 14px;
+	text-align: center;
+}
 
 
 /* TEXTOS */
-
-p1 {
-    font-size: 15px;
-}
 
 h2 {
     font-size: 1rem;
@@ -142,95 +153,78 @@ h2 {
 
 h3 {
     font-size: 13px;
+    margin-top: 10px;
 }
 
 
 /* FORMULARIO */
 
 .formulario {
-    background: linear-gradient(
-        rgb(255, 255, 255),
-        rgb(169, 169, 169)
-    );
-    padding: 15px;
-    width: 100%;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px gray;
-}
-
-
-/* PRESENTACIÓN */
-
-.presentacion {
-    background: linear-gradient(
-        rgb(255, 255, 255),
-        rgb(169, 169, 169)
-    );
-    padding: 15px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px gray;
-}
-
-
-/* FORMULARIO */
-
-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+	width: 100%;
+	max-width: 1040px;
+	margin: auto;
+	padding: 25px 20px 15px;
+	background-color: #eef3fb;
+	border-radius: 30px;
+	box-sizing: border-box;
 }
-
-label {
-    margin-top: 5px;
-    font-size: 15px;
+.datos {
+	width: 100%;
+	margin: 0 auto 18px;
+	text-align: left;
 }
-
-input {
+.datos label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #15547f;
+}
+.datos input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    font-size: 16px;
+	height: 55px;
+	padding: 0 18px;
+	border: 1px solid #d8d8d8;
+	border-radius: 15px;
+	background-color: white;
+	font-size: 13px;
+	outline: none;
+	box-sizing: border-box;
 }
 
-/* ENLACE REGISTRARSE */
+.input-password {
+	position: relative;
+}
 
-#registrarse {
+.input-password button {
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	background: none;
+	font-size: 22px;
+	cursor: pointer;
+}
+.btn-iniciarS {
+	width: 80%;
+	height: 55px;
+	margin-top: 2px;
+	border: none;
+	border-radius: 30px;
+	background-color: #126296;
+	color: white;
+	font-size: 14px;
+	font-weight: 800;
+	cursor: pointer;
+}
+#iniciarSesion {
     color: blue;
     text-decoration: underline;
 }
-
-
-/* BOTÓN */
-
-button {
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
-    width: fit-content;
-    margin: 10px auto;
-}
-
-button:hover {
-    padding: 12px;
-    background: #1d4ed8;
-}
-
-.link_gestion {
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 /* FOOTER */
 
 footer {
@@ -291,38 +285,25 @@ footer {
     }
 
 
-    /* FORMULARIO */
+    /* TÍTULO */
 
-    .formulario {
-        padding: 20px;
+    .gestion_titulo {
+        font-size: 2rem;
     }
 
-
-    /* PRESENTACIÓN */
-
-    .presentacion {
-        padding: 20px;
-    }
-
-
-    /* INPUT */
-
-    input {
-        font-size: 13px;
-    }
-
-
-    /* BOTÓN */
-
-    button {
-        padding: 10px 25px;
-        font-size: 1rem;
-    }
-
-    button:hover {
-        padding: 10px 30px;
-    }
-
+    .btn-iniciarS {
+    width: 50%;
+	font-size: 19px;
+}
+.datos label {
+	font-size: 18px;
+}
+.datos {
+	width: 85%;
+}
+    .datos input {
+	font-size: 18px;
+}
 
     /* FOOTER */
 
