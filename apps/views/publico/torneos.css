@@ -479,16 +479,20 @@ footer {
 }
 @media screen and (min-width:769px) {
 	.header {
-		position:fixed;
-		top:0;
-		left:0;
-		width:220px;
-		height:100vh;
-		padding:25px 0;
-		gap:30px;
-		background:rgba(52,122,252,.35);
-		border-right:1px solid rgb(53,36,126);
-		z-index:1000;
+		position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 25px 0;
+        gap: 30px;
+        background: rgba(52, 122, 252, 0.35);
+        border-right: 1px solid rgb(53, 36, 126);
+        z-index: 1000;
 	}
 	.header__nav {
 		flex-direction:column;
