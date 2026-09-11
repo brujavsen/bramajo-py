@@ -2,11 +2,19 @@
 
 class Conexion
 {
-    private $host = 'bramajo-garafeandoando-320e.f.aivencloud.com';
-    private $port = '25519';
-    private $dbname = 'bramajo';
-    private $username = 'avnadmin';
-    private $password = 'AVNS_P94Zadt3Nb-dO7eqqC_';
+   private $host = 'localhost';
+
+
+// Nombre de la base de datos a la que queremos conectarnos.
+private $dbname = 'bramajo';
+
+
+// Usuario utilizado para conectarse a MySQL.
+private $username = 'root';
+
+
+// Contraseña del usuario de MySQL.
+private $password = '';
 
     private $pdo;
 
@@ -21,11 +29,11 @@ class Conexion
         try {
 
             $this->pdo = new PDO(
-                "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset=utf8mb4",
-                $this->username,
-                $this->password
+            "mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4",
+            $this->username,
+            $this->password
             );
-
+            
             // Configuramos PDO para que lance excepciones
             // cuando ocurra un error.
             $this->pdo->setAttribute(
