@@ -32,11 +32,11 @@ $usuario = new Usuario($pdo);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Obtenemos el email.
-    $email = trim($_POST['email'] ?? '');
+    $email = trim($_POST['correo'] ?? '');
 
 
     // Obtenemos la contraseña.
-    $contrasena = $_POST['contrasena'] ?? '';
+    $contrasena = $_POST['password'] ?? '';
 
 
     // Comprobamos que se hayan completado

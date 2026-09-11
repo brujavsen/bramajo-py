@@ -2,10 +2,11 @@
 
 class Conexion
 {
-    private $host = 'localhost';
+    private $host = 'bramajo-garafeandoando-320e.f.aivencloud.com';
+    private $port = '25519';
     private $dbname = 'bramajo';
-    private $username = 'root';
-    private $password = 'root';
+    private $username = 'avnadmin';
+    private $password = 'AVNS_P94Zadt3Nb-dO7eqqC_';
 
     private $pdo;
 
@@ -20,7 +21,7 @@ class Conexion
         try {
 
             $this->pdo = new PDO(
-                "mysql:host={$this->host};dbname={$this->dbname};charset=utf8mb4",
+                "mysql:host={$this->host};port={$this->port};dbname={$this->dbname};charset=utf8mb4",
                 $this->username,
                 $this->password
             );

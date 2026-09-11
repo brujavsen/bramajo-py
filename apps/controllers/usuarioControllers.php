@@ -32,10 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $apellido = trim($_POST['apellido'] ?? '');
 
-    $email = trim($_POST['email'] ?? '');
+    $email = trim($_POST['correo'] ?? '');
 
     // No usamos trim() en la contraseña.
-    $contrasena = $_POST['contrasena'] ?? '';
+    $contrasena = $_POST['password'] ?? '';
 
 
     // El rol será participante por defecto.
@@ -46,7 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // estén completos.
     if (
         empty($nombre) ||
-        empty($apellido) ||
         empty($email) ||
         empty($contrasena)
     ) {
