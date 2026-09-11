@@ -351,6 +351,20 @@ select {
 	cursor: pointer;
 	transition: 0.3s ease;
 }
+
+.torneo-card {
+    cursor: pointer;
+}
+
+.sin-torneos {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    color: #d0d0d0;
+    background: rgba(0, 0, 80, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+}
 .torneos-grid {
 	width:100%;
 	display:grid;
