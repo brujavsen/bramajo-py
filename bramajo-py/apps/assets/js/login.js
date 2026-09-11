@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			mensajeError.textContent = 'No se pudo conectar con el servidor.';
 		}
 	});
-OJITO.addEventListener('click', () => {
+	OJITO.addEventListener('click', () => {
 		const passwordInput = document.getElementById('password');
 		passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password'
 	});

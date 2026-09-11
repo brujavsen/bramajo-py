@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Buscamos el formulario de registro por su ID en la página PHP.
 	const formRegistro = document.getElementById('formRegistro');
 	const OJITO = document.getElementById('mostrarPassword');
-	
-	
+
+
 	// Si no encontramos el formulario, detenemos el código.
 	// Esto evita que JavaScript intente trabajar con un elemento que no existe.
 	if (!formRegistro) return;
