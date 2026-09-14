@@ -58,7 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		try {
 			// Enviamos los datos del formulario al servidor mediante fetch().
 			// La dirección apunta al archivo PHP que procesa el registro.
+<<<<<<< HEAD
 			const respuesta = await fetch('/PROYECTO/apps/controllers/usuarioControllers.php', {
+=======
+			const respuesta = await fetch('../controllers/usuarioControllers.php', {
+>>>>>>> e88b833f7e18975d491671490dda3facbe09bbe9
 				// Usamos POST porque estamos enviando información al servidor.
 				method: 'POST',
 
