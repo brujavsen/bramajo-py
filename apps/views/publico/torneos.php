@@ -1,6 +1,6 @@
 <?php
 
-$usuarioLogueado = true;
+$usuarioLogueado = false;
 /*  Require-once carga el archivo de datostorneos y saca los datos del array */
 require_once "datosTorneos.php";
 

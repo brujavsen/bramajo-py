@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $usuarioLogueado = true;
+    $usuarioLogueado = false;
 ?>
 
 <!doctype html>

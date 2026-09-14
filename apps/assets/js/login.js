@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		try {
 
 			// Enviamos los datos al controlador PHP mediante fetch().
-			const respuesta = await fetch('/bramajo-py/apps/controllers/loginControllers.php', {
+			const respuesta = await fetch('/PROYECTO/apps/controllers/loginControllers.php', {
 
 				// Usamos POST porque estamos enviando información al servidor.
 				method: 'POST',
