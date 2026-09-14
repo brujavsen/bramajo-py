@@ -59,11 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		try {
 
 			// Enviamos los datos al controlador PHP mediante fetch().
-<<<<<<< HEAD
-			const respuesta = await fetch('/PROYECTO/apps/controllers/loginControllers.php', {
-=======
 			const respuesta = await fetch('../controllers/loginControllers.php', {
->>>>>>> e88b833f7e18975d491671490dda3facbe09bbe9
 
 				// Usamos POST porque estamos enviando información al servidor.
 				method: 'POST',
