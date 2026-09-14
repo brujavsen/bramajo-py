@@ -192,9 +192,9 @@ if ($filtro === "abiertas") {
 		<footer>
 			<h3>BRAMAJO - Sistema de Gestión de Torneos</h3>
 			<p1>
-				telefono: +54 9 11 1234-5678 | email: info@bramajo.com  | 
+				telefono: +598 96 123 456 | email: info@bramajo.com  | 
 			</p1>
-			<p2>Dirección: Av. Siempre Viva 123 | Ciudad, País</p2>
+			<p2>Dirección: Ejido 1275 | Montevideo, Uruguay</p2>
 			
 			<p3>Redes sociales: bramajo en Facebook, @bramajo en Twitter, @bramajo en Instagram</p3>
 			
